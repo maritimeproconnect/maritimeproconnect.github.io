@@ -1213,34 +1213,34 @@ footer ul a:hover{color:var(--gold);}
      Formspree ID for contractor applications: xykoddoy
      Applications go to: maritimeproconnect@gmail.com
 ═══════════════════════════════════════ -->
-<div class="page" id="page-contractors">
+<div class="page" id="page-contractors" style="padding-top:58px;">
 
 <!-- Contractor sub-nav (replaces main nav look for this section) -->
-<div style="background:rgba(14,24,32,0.98);border-bottom:2px solid var(--gold);padding:16px 48px;display:flex;justify-content:space-between;align-items:center;margin-top:-58px;position:relative;z-index:1;">
+<div style="background:rgba(14,24,32,0.98);border-bottom:2px solid var(--gold);padding:16px 48px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:150;">
   <div>
     <!-- ✏️ KEYNOTE: Contractor page logo — click takes you back to homeowner home -->
     <div class="logo" onclick="goTo('home')" style="display:block;margin-bottom:2px;">Maritime <span>Pro</span> Connect</div>
     <div style="font-size:11px;color:rgba(200,164,90,0.6);letter-spacing:2px;text-transform:uppercase;font-weight:600;">For Contractors</div>
   </div>
   <div style="display:flex;gap:32px;align-items:center;">
-    <a onclick="document.getElementById('con-pricing').scrollIntoView({behavior:'smooth'})" style="color:rgba(247,249,251,0.65);font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;" onmouseover="this.style.color='#c8a45a'" onmouseout="this.style.color='rgba(247,249,251,0.65)'">Pricing</a>
-    <a onclick="document.getElementById('con-how').scrollIntoView({behavior:'smooth'})" style="color:rgba(247,249,251,0.65);font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;" onmouseover="this.style.color='#c8a45a'" onmouseout="this.style.color='rgba(247,249,251,0.65)'">How It Works</a>
-    <a onclick="document.getElementById('con-signup').scrollIntoView({behavior:'smooth'})" style="color:rgba(247,249,251,0.65);font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;" onmouseover="this.style.color='#c8a45a'" onmouseout="this.style.color='rgba(247,249,251,0.65)'">Join Now</a>
+    <a onclick="conScrollTo('con-pricing')" style="color:rgba(247,249,251,0.65);font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;" onmouseover="this.style.color='#c8a45a'" onmouseout="this.style.color='rgba(247,249,251,0.65)'">Pricing</a>
+    <a onclick="conScrollTo('con-how')" style="color:rgba(247,249,251,0.65);font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;" onmouseover="this.style.color='#c8a45a'" onmouseout="this.style.color='rgba(247,249,251,0.65)'">How It Works</a>
+    <a onclick="conScrollTo('con-signup')" style="color:rgba(247,249,251,0.65);font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;" onmouseover="this.style.color='#c8a45a'" onmouseout="this.style.color='rgba(247,249,251,0.65)'">Join Now</a>
     <button onclick="goTo('home')" style="background:transparent;border:1px solid rgba(200,164,90,0.4);color:rgba(200,164,90,0.65);padding:7px 16px;font-size:13px;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.borderColor='#c8a45a';this.style.color='#c8a45a'" onmouseout="this.style.borderColor='rgba(200,164,90,0.4)';this.style.color='rgba(200,164,90,0.65)'">← Homeowner Site</button>
-    <button onclick="document.getElementById('con-signup').scrollIntoView({behavior:'smooth'})" style="background:var(--gold);color:var(--navy);border:none;padding:10px 22px;font-weight:700;font-size:14px;cursor:pointer;">Start Getting Leads</button>
+    <button onclick="conScrollTo('con-signup')" style="background:var(--gold);color:var(--navy);border:none;padding:10px 22px;font-weight:700;font-size:14px;cursor:pointer;">Start Getting Leads</button>
   </div>
 </div>
 
 <!-- Contractor Hero -->
-<div class="con-hero">
+<div class="con-hero" style="padding-top:80px;">
   <div class="con-content">
     <div class="for-badge">For Licensed Contractors — Moncton &amp; Halifax</div>
     <h1 class="con-h1">Stop Chasing Work.<br><em>Let Leads Come to You.</em></h1>
     <div class="con-divider"></div>
     <p class="con-sub">We send you homeowners who are already looking for exactly what you do — pre-qualified, local, and ready to hire. You focus on the work. We handle the lead generation.</p>
     <div class="con-btns">
-      <button class="btn-gold" style="padding:16px 40px;font-size:16px;" onclick="document.getElementById('con-signup').scrollIntoView({behavior:'smooth'})">Start Getting Leads →</button>
-      <button class="btn-ghost" onclick="document.getElementById('con-pricing').scrollIntoView({behavior:'smooth'})">View Pricing</button>
+      <button class="btn-gold" style="padding:16px 40px;font-size:16px;" onclick="conScrollTo('con-signup')">Start Getting Leads →</button>
+      <button class="btn-ghost" onclick="conScrollTo('con-pricing')">View Pricing</button>
     </div>
     <!-- ✏️ KEYNOTE: Update these stats as your network grows -->
     <div class="con-stats">
@@ -1278,7 +1278,7 @@ footer ul a:hover{color:var(--gold);}
         <li>No monthly minimums</li>
         <li>Cancel anytime</li>
       </ul>
-      <button class="price-btn" onclick="document.getElementById('con-signup').scrollIntoView({behavior:'smooth'})">Get Started</button>
+      <button class="price-btn" onclick="conScrollTo('con-signup')">Get Started</button>
     </div>
     <div class="price-card featured">
       <div class="price-label">Monthly Plan</div>
@@ -1294,7 +1294,7 @@ footer ul a:hover{color:var(--gold);}
         <li>Dedicated account support</li>
         <li>Pause or cancel anytime</li>
       </ul>
-      <button class="price-btn" onclick="document.getElementById('con-signup').scrollIntoView({behavior:'smooth'})">Start Monthly Plan</button>
+      <button class="price-btn" onclick="conScrollTo('con-signup')">Start Monthly Plan</button>
     </div>
     <div class="price-card">
       <div class="price-label">Power Plan</div>
@@ -1310,7 +1310,7 @@ footer ul a:hover{color:var(--gold);}
         <li>Featured listing on homeowner site</li>
         <li>Priority support line</li>
       </ul>
-      <button class="price-btn" onclick="document.getElementById('con-signup').scrollIntoView({behavior:'smooth'})">Go Power Plan</button>
+      <button class="price-btn" onclick="conScrollTo('con-signup')">Go Power Plan</button>
     </div>
   </div>
 </section>
@@ -1614,7 +1614,7 @@ window.addEventListener('scroll', function() {
 function sendLead(data, formEl, successEl) {
   var btn = formEl ? formEl.querySelector('.submit-btn') : null;
   if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
-  fetch('https://formspree.io/f/maqvddag' + FORMSPREE_HOMEOWNER, {
+  fetch('https://formspree.io/f/maqvddag', { // ✏️ KEYNOTE: Homeowner Formspree endpoint
     method: 'POST',
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
@@ -1690,13 +1690,24 @@ function submitContact() {
 function blogSub() {
   var e = document.getElementById('blogEmail').value.trim();
   if (!e || !e.includes('@')) { alert('Please enter a valid email address.'); return; }
-  fetch('https://formspree.io/f/' + FORMSPREE_HOMEOWNER, {
+  fetch('https://formspree.io/f/maqvddag', { // ✏️ KEYNOTE: Homeowner Formspree endpoint
     method: 'POST',
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
     body: JSON.stringify({ email:e, _subject:'📬 New Newsletter Subscriber', source:'Blog' })
   })
   .then(function(){ document.getElementById('blogSubMsg').style.display = 'block'; })
   .catch(function(){ document.getElementById('blogSubMsg').style.display = 'block'; });
+}
+
+// ── CONTRACTOR PAGE SCROLL HELPER ──
+// Scrolls to a section within the contractor page accounting for sticky navbars
+function conScrollTo(id) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  // Offset for main nav (58px) + contractor sub-nav (~58px)
+  var offset = 120;
+  var top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+  window.scrollTo({ top: top, behavior: 'smooth' });
 }
 
 // ── CONTRACTOR SIGN-UP FORM ──
@@ -1715,7 +1726,7 @@ function submitContractor() {
   var trades = Array.from(document.querySelectorAll('.checkbox-group input:checked')).map(function(c){ return c.value; });
   var btn = document.querySelector('.big-submit');
   if (btn) { btn.disabled = true; btn.textContent = 'Submitting…'; }
-  fetch('https://formspree.io/f/xykoddoy' + FORMSPREE_CONTRACTOR, {
+  fetch('https://formspree.io/f/xykoddoy', { // ✏️ KEYNOTE: Contractor Formspree endpoint
     method: 'POST',
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
     body: JSON.stringify({
