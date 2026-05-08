@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maritime Pro Connect – Trusted Contractors in Moncton & Halifax</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#1a2a3a; --ocean:#2c4a6e; --fog:#e8edf2; --slate:#4a5f72;
+  --gold:#c8a45a; --white:#f7f9fb; --ink:#141e28; --sage:#2d6a4f;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Sans 3',Georgia,sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;}
+
+/* ── PAGE SYSTEM ── */
+.page{display:none;}
+.page.active{display:block;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:16px 48px;background:rgba(26,42,58,0.97);backdrop-filter:blur(14px);border-bottom:2px solid var(--gold);}
+.logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#fff;cursor:pointer;}
+.logo span{color:var(--gold);}
+nav ul{list-style:none;display:flex;gap:32px;}
+nav ul a{text-decoration:none;color:rgba(247,249,251,0.7);font-size:14px;font-weight:500;cursor:pointer;transition:color 0.2s;}
+nav ul a:hover{color:var(--gold);}
+.nav-cta{background:var(--gold);color:var(--navy);border:none;padding:10px 24px;font-weight:700;font-size:14px;cursor:pointer;transition:background 0.2s;}
+.nav-cta:hover{background:#dbb96a;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;transition:all 0.3s;}
+
+/* ── SHARED ── */
+.section-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.section-h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,48px);font-weight:900;line-height:1.12;margin-bottom:14px;color:var(--navy);}
+.section-h2 em{font-style:italic;color:var(--ocean);}
+.section-lead{font-size:16px;color:var(--slate);max-width:520px;line-height:1.75;margin-bottom:48px;font-weight:300;}
+.gold-bar{width:56px;height:3px;background:var(--gold);margin:20px 0;}
+.divider{height:1px;background:#dce3ea;margin:44px 0;}
+.card{background:#fff;border-left:4px solid var(--gold);padding:32px 28px;margin-bottom:18px;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+.card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.card p,.card li{font-size:15px;color:var(--slate);line-height:1.8;font-weight:300;}
+.card.blue{border-left-color:var(--ocean);}
+.card.green{border-left-color:var(--sage);}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:20px;}
+.page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--ocean) 100%);padding:120px 80px 72px;border-bottom:3px solid var(--gold);position:relative;overflow:hidden;}
+.page-hero::after{content:'';position:absolute;right:-60px;top:-60px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(200,164,90,0.1) 0%,transparent 70%);pointer-events:none;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,64px);font-weight:900;line-height:1.08;color:#fff;margin-bottom:14px;}
+.page-hero h1 em{font-style:italic;color:var(--gold);}
+.page-hero p{color:rgba(232,237,242,0.7);font-size:16px;line-height:1.75;max-width:560px;font-weight:300;}
+.page-body{max-width:960px;margin:0 auto;padding:64px 40px;}
+tbl-wrap{overflow-x:auto;}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:16px 0;}
+th{background:var(--navy);color:var(--gold);padding:12px 16px;text-align:left;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;}
+td{padding:12px 16px;border-bottom:1px solid #e4eaf0;color:var(--ink);line-height:1.55;vertical-align:top;}
+tr:nth-child(even) td{background:#f4f7fa;}
+.form-group{margin-bottom:14px;}
+.form-group label{display:block;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--slate);margin-bottom:5px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 13px;border:1.5px solid #d0d8e4;font-family:'Source Sans 3',sans-serif;font-size:15px;color:var(--ink);background:#fff;outline:none;transition:border-color 0.2s;appearance:none;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--ocean);}
+.form-group textarea{resize:vertical;min-height:100px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.submit-btn{width:100%;padding:14px;background:var(--navy);color:var(--gold);border:none;font-family:'Playfair Display',serif;font-size:17px;font-weight:700;cursor:pointer;margin-top:6px;transition:background 0.2s;}
+.submit-btn:hover{background:var(--ocean);}
+.form-note{font-size:11px;color:#9aacba;text-align:center;margin-top:10px;line-height:1.6;}
+.success-msg{display:none;text-align:center;padding:28px;}
+.success-msg h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:10px;color:var(--navy);}
+.success-msg p{color:var(--slate);font-size:14px;line-height:1.7;}
+.cta-band{background:var(--navy);padding:72px 80px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;border-top:3px solid var(--gold);}
+.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,44px);font-weight:900;color:#fff;line-height:1.1;}
+.cta-band h2 em{font-style:italic;color:var(--gold);}
+.cta-band p{color:rgba(232,237,242,0.6);font-size:15px;margin-top:8px;font-weight:300;}
+.btn-gold{background:var(--gold);color:var(--navy);border:none;padding:14px 34px;font-weight:700;font-size:15px;cursor:pointer;transition:background 0.2s;white-space:nowrap;}
+.btn-gold:hover{background:#dbb96a;}
+.btn-ghost{background:transparent;color:rgba(247,249,251,0.8);border:1.5px solid rgba(232,237,242,0.25);padding:14px 34px;font-weight:500;font-size:15px;cursor:pointer;transition:all 0.2s;}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+.legal-body h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);margin:32px 0 10px;}
+.legal-body p,.legal-body li{font-size:15px;color:var(--slate);line-height:1.85;font-weight:300;margin-bottom:10px;}
+.legal-body ul{padding-left:20px;margin-bottom:16px;}
+
+/* ── HOME PAGE ── */
+.hero{min-height:100vh;background:var(--navy);position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 480px;padding-top:58px;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 80%,rgba(44,74,110,0.6) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 85% 20%,rgba(200,164,90,0.08) 0%,transparent 50%);pointer-events:none;}
+.hero::after{content:'';position:absolute;top:-10%;left:52%;width:3px;height:130%;background:linear-gradient(180deg,transparent,var(--gold),transparent);opacity:0.25;transform:rotate(8deg);pointer-events:none;}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:80px 56px 80px 80px;position:relative;z-index:2;}
+.region-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(200,164,90,0.15);border:1px solid rgba(200,164,90,0.4);color:var(--gold);font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:7px 16px;margin-bottom:28px;width:fit-content;}
+.region-pill::before{content:'🌊';font-size:14px;}
+.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(40px,5.5vw,76px);font-weight:900;line-height:1.05;color:#fff;margin-bottom:8px;}
+.hero-h1 .place{display:block;font-style:italic;color:var(--gold);font-size:clamp(30px,4vw,56px);}
+.hero-divider{width:60px;height:3px;background:var(--gold);margin:24px 0;}
+.hero-sub{color:rgba(232,237,242,0.72);font-size:17px;line-height:1.75;max-width:460px;margin-bottom:40px;font-weight:300;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.trust-badges{display:flex;flex-wrap:wrap;gap:20px;margin-top:32px;}
+.badge{display:flex;align-items:center;gap:8px;color:rgba(232,237,242,0.5);font-size:13px;}
+.badge-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;}
+.hero-right{background:var(--white);display:flex;align-items:center;justify-content:center;padding:80px 48px;position:relative;z-index:2;border-left:3px solid var(--gold);}
+.lead-form{width:100%;max-width:380px;}
+.form-eyebrow{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.form-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;margin-bottom:6px;color:var(--navy);line-height:1.2;}
+.form-sub{font-size:14px;color:var(--slate);margin-bottom:24px;line-height:1.6;}
+.stats-bar{background:var(--ocean);display:flex;justify-content:space-around;flex-wrap:wrap;padding:28px 40px;gap:20px;border-top:3px solid var(--gold);}
+.stat{text-align:center;}
+.stat-num{font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:var(--gold);line-height:1;}
+.stat-lbl{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(232,237,242,0.6);margin-top:4px;}
+.how-section{background:var(--fog);padding:80px;}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
+.step{background:#fff;padding:40px 32px;border-top:4px solid transparent;transition:border-color 0.25s,transform 0.2s;}
+.step:hover{border-top-color:var(--gold);transform:translateY(-4px);}
+.step-num{font-family:'Playfair Display',serif;font-size:60px;font-weight:900;color:rgba(26,42,58,0.06);line-height:1;margin-bottom:12px;}
+.step-icon{font-size:28px;margin-bottom:14px;}
+.step h3{font-family:'Playfair Display',serif;font-size:19px;margin-bottom:10px;color:var(--navy);}
+.step p{font-size:14px;color:var(--slate);line-height:1.75;font-weight:300;}
+.services-section{background:var(--navy);padding:80px;}
+.services-section .section-h2{color:#fff;}
+.services-section .section-lead{color:rgba(232,237,242,0.55);}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;}
+.service-card{background:rgba(255,255,255,0.04);padding:32px 24px;cursor:pointer;border-bottom:2px solid transparent;transition:background 0.2s,border-color 0.2s;}
+.service-card:hover{background:rgba(255,255,255,0.09);border-bottom-color:var(--gold);}
+.service-icon{font-size:30px;margin-bottom:12px;}
+.service-card h4{color:#fff;font-size:15px;font-weight:600;margin-bottom:7px;}
+.service-card p{color:rgba(232,237,242,0.4);font-size:13px;line-height:1.65;font-weight:300;}
+.reviews-section{background:var(--white);padding:80px;}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.trust-card{background:var(--fog);padding:34px 28px;border-left:4px solid var(--gold);transition:box-shadow 0.2s;}
+.trust-card:hover{box-shadow:4px 4px 0 var(--gold);}
+.stars{color:var(--gold);font-size:16px;margin-bottom:12px;letter-spacing:2px;}
+.trust-card blockquote{font-size:15px;line-height:1.75;color:var(--ink);font-style:italic;margin-bottom:18px;font-weight:300;}
+.reviewer{font-weight:600;font-size:13px;color:var(--navy);}
+.reviewer span{font-weight:400;color:var(--slate);}
+.cities-section{background:var(--ocean);padding:72px 80px;display:grid;grid-template-columns:1fr 1fr;gap:3px;}
+.city-block{background:rgba(255,255,255,0.06);padding:56px 48px;border-top:4px solid var(--gold);transition:background 0.2s;}
+.city-block:hover{background:rgba(255,255,255,0.1);}
+.city-flag{font-size:38px;margin-bottom:14px;}
+.city-block h3{font-family:'Playfair Display',serif;font-size:30px;color:#fff;margin-bottom:6px;}
+.city-block .province{color:var(--gold);font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;}
+.city-block p{color:rgba(232,237,242,0.6);font-size:15px;line-height:1.75;font-weight:300;max-width:340px;}
+.city-trades{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+.trade-tag{background:rgba(200,164,90,0.15);border:1px solid rgba(200,164,90,0.35);color:var(--gold);font-size:12px;font-weight:600;padding:4px 12px;}
+
+/* ── BLOG ── */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:40px;}
+.blog-card{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.06);overflow:hidden;cursor:pointer;transition:transform 0.2s;}
+.blog-card:hover{transform:translateY(-4px);}
+.blog-thumb{height:140px;display:flex;align-items:center;justify-content:center;font-size:44px;border-bottom:3px solid var(--gold);}
+.blog-body{padding:22px;}
+.blog-cat{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.blog-card h3{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:7px;line-height:1.35;}
+.blog-card p{font-size:13px;color:var(--slate);line-height:1.6;font-weight:300;}
+.blog-meta{font-size:12px;color:var(--slate);margin-top:10px;}
+
+/* ── ABOUT ── */
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;}
+.team-card{background:#fff;padding:36px 28px;border-top:4px solid var(--gold);box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+.team-avatar{width:72px;height:72px;border-radius:50%;background:var(--ocean);display:flex;align-items:center;justify-content:center;font-size:32px;margin-bottom:16px;}
+.team-card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.team-role{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.team-card p{font-size:14px;color:var(--slate);line-height:1.75;font-weight:300;}
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px;}
+.value-box{background:var(--fog);padding:28px 24px;border-top:3px solid var(--ocean);}
+.value-box h4{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.value-box p{font-size:14px;color:var(--slate);line-height:1.65;font-weight:300;}
+
+/* ── SERVICE DETAIL ── */
+.svc-detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px;}
+.svc-box{background:#fff;padding:28px 24px;border-top:4px solid var(--gold);box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+.svc-box h3{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.svc-box p{font-size:14px;color:var(--slate);line-height:1.65;font-weight:300;}
+
+/* ── FOOTER ── */
+footer{background:#0e1820;padding:56px 80px 24px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;border-top:3px solid rgba(200,164,90,0.3);}
+.footer-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#fff;display:block;margin-bottom:14px;cursor:pointer;}
+.footer-logo span{color:var(--gold);}
+.footer-brand p{color:rgba(232,237,242,0.4);font-size:14px;line-height:1.75;max-width:240px;font-weight:300;}
+footer h5{color:rgba(232,237,242,0.9);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;}
+footer ul{list-style:none;}
+footer ul li{margin-bottom:10px;}
+footer ul a{color:rgba(232,237,242,0.4);text-decoration:none;font-size:14px;transition:color 0.2s;cursor:pointer;font-weight:300;}
+footer ul a:hover{color:var(--gold);}
+.footer-bottom{grid-column:1/-1;border-top:1px solid rgba(255,255,255,0.06);padding-top:22px;margin-top:8px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.footer-bottom p{color:rgba(232,237,242,0.25);font-size:12px;}
+.footer-contractor-link{color:rgba(200,164,90,0.5);text-decoration:none;font-size:12px;cursor:pointer;transition:color 0.2s;}
+.footer-contractor-link:hover{color:var(--gold);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  nav{padding:14px 20px;}
+  nav ul{display:none;}
+  .hamburger{display:flex;}
+  .hero{grid-template-columns:1fr;}
+  .hero-left{padding:60px 24px;}
+  .hero-right{padding:48px 24px;border-left:none;border-top:3px solid var(--gold);}
+  .how-section,.services-section,.reviews-section{padding:56px 24px;}
+  .steps{grid-template-columns:1fr;}
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+  .trust-grid{grid-template-columns:1fr;}
+  .cities-section{grid-template-columns:1fr;padding:48px 24px;}
+  .cta-band{grid-template-columns:1fr;padding:48px 24px;}
+  footer{grid-template-columns:1fr 1fr;padding:48px 24px 20px;}
+  .page-hero{padding:100px 24px 56px;}
+  .page-body{padding:48px 20px;}
+  .grid-2,.grid-3,.svc-detail-grid,.team-grid,.value-grid,.blog-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════ NAV ═══════ -->
+<nav id="mainNav">
+  <div class="logo" onclick="goTo('home')">Maritime <span>Pro</span> Connect</div>
+  <ul id="navLinks">
+    <li><a onclick="goTo('home');scrollTo('how-it-works')">How It Works</a></li>
+    <li><a onclick="goTo('home');scrollTo('services')">Services</a></li>
+    <li><a onclick="goTo('home');scrollTo('cities')">Our Cities</a></li>
+    <li><a onclick="goTo('home');scrollTo('reviews')">Reviews</a></li>
+    <li><a onclick="goTo('about')">About</a></li>
+    <li><a onclick="goTo('contact')">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="goTo('home');setTimeout(()=>scrollTo('get-quote'),100)">Get Free Quote</button>
+  <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     HOME PAGE
+═══════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="region-pill">Moncton &amp; Halifax — Maritime Canada</div>
+    <h1 class="hero-h1">Trusted Contractors,<span class="place">Right Here at Home.</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">We connect Moncton and Halifax homeowners with licensed, vetted local contractors — roofing, plumbing, electrical, renovations &amp; more. Free quotes. No obligation. No hassle.</p>
+    <div class="hero-btns">
+      <button class="btn-gold" onclick="scrollTo('get-quote')">Get My Free Quote</button>
+      <button class="btn-ghost" onclick="scrollTo('how-it-works')">See How It Works</button>
+    </div>
+    <div class="trust-badges">
+      <div class="badge"><div class="badge-dot"></div>Licensed &amp; Insured Pros</div>
+      <div class="badge"><div class="badge-dot"></div>100% Free for Homeowners</div>
+      <div class="badge"><div class="badge-dot"></div>Local Maritime Contractors</div>
+    </div>
+  </div>
+  <div class="hero-right" id="get-quote">
+    <div class="lead-form">
+      <div class="form-eyebrow">Free — No Obligation</div>
+      <div class="form-title">Get Your Free Quote</div>
+      <p class="form-sub">Tell us your project — we'll match you with trusted local pros in Moncton or Halifax.</p>
+      <div id="homeFormContent">
+        <div class="form-group"><label>Your Name</label><input type="text" id="fname" placeholder="Jane Doe"></div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone</label><input type="tel" id="fphone" placeholder="(506) 000-0000"></div>
+          <div class="form-group"><label>City</label>
+            <select id="fcity">
+              <option value="">— Select —</option>
+              <option>Moncton, NB</option><option>Riverview, NB</option><option>Dieppe, NB</option>
+              <option>Halifax, NS</option><option>Dartmouth, NS</option><option>Bedford, NS</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><label>Email</label><input type="email" id="femail" placeholder="you@email.com"></div>
+        <div class="form-group"><label>Service Needed</label>
+          <select id="fservice">
+            <option value="">— Select a trade —</option>
+            <option>Roofing</option><option>Plumbing</option><option>Electrical</option><option>HVAC / Heating</option>
+            <option>Kitchen Remodel</option><option>Bathroom Remodel</option><option>Flooring</option>
+            <option>Painting</option><option>Basement Finishing</option><option>Deck / Fence</option>
+            <option>General Contracting</option><option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Project Details</label><textarea id="fdesc" placeholder="Brief description of your project…"></textarea></div>
+        <button class="submit-btn" onclick="submitLead()">Send My Request →</button>
+        <p class="form-note">🔒 Your info is never sold. Contractors contact you directly.</p>
+      </div>
+      <div class="success-msg" id="homeSuccess">
+        <div style="font-size:48px;margin-bottom:14px;">✅</div>
+        <h3>Request Received!</h3>
+        <p>We're matching you with top-rated local contractors.<br>Expect a call within <strong>24 hours</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">180+</div><div class="stat-lbl">Verified Contractors</div></div>
+  <div class="stat"><div class="stat-num">850+</div><div class="stat-lbl">Projects Matched</div></div>
+  <div class="stat"><div class="stat-num">2</div><div class="stat-lbl">Cities Covered</div></div>
+  <div class="stat"><div class="stat-num">24h</div><div class="stat-lbl">Avg. Response Time</div></div>
+</div>
+
+<section class="how-section" id="how-it-works">
+  <div class="section-eyebrow">The Process</div>
+  <h2 class="section-h2">Simple as <em>1, 2, 3</em></h2>
+  <p class="section-lead">From first click to finished project — no runaround, just the right contractor for your job.</p>
+  <div class="steps">
+    <div class="step"><div class="step-num">01</div><div class="step-icon">📋</div><h3>Submit Your Project</h3><p>Fill out the short form in under 60 seconds. Tell us your trade, city, and a quick description of what you need done.</p></div>
+    <div class="step"><div class="step-num">02</div><div class="step-icon">🔍</div><h3>We Match &amp; Verify</h3><p>We match your request to licensed, insured, and reviewed local contractors in Moncton or Halifax who handle exactly your trade.</p></div>
+    <div class="step"><div class="step-num">03</div><div class="step-icon">📞</div><h3>Pros Reach Out to You</h3><p>Up to 3 pre-screened contractors contact you with quotes. You compare, ask questions, and choose — zero pressure.</p></div>
+  </div>
+</section>
+
+<section class="services-section" id="services">
+  <div class="section-eyebrow">What We Cover</div>
+  <h2 class="section-h2">Every Trade. <em>Every Project.</em></h2>
+  <p class="section-lead">From emergency repairs to full Maritime home renovations — our local network has you covered.</p>
+  <div class="services-grid">
+    <div class="service-card" onclick="goTo('roofing')"><div class="service-icon">🏠</div><h4>Roofing</h4><p>Repairs, replacements, gutters &amp; ice-dam prevention for Atlantic winters.</p></div>
+    <div class="service-card" onclick="goTo('plumbing')"><div class="service-icon">🔧</div><h4>Plumbing</h4><p>Leak repairs, fixture installs, water heaters &amp; pipe winterization.</p></div>
+    <div class="service-card" onclick="goTo('electrical')"><div class="service-icon">⚡</div><h4>Electrical</h4><p>Panel upgrades, outlets, wiring &amp; EV charger installs.</p></div>
+    <div class="service-card" onclick="goTo('hvac')"><div class="service-icon">🔥</div><h4>HVAC &amp; Heating</h4><p>Furnace repairs, heat pump installs, duct cleaning &amp; maintenance.</p></div>
+    <div class="service-card" onclick="goTo('renovations')"><div class="service-icon">🍳</div><h4>Kitchen Remodeling</h4><p>Cabinets, countertops, full renovations — built to Maritime taste.</p></div>
+    <div class="service-card" onclick="goTo('renovations')"><div class="service-icon">🛁</div><h4>Bathroom Remodeling</h4><p>Tile work, vanity upgrades, walk-in showers &amp; full remodels.</p></div>
+    <div class="service-card" onclick="goTo('renovations')"><div class="service-icon">🪵</div><h4>Flooring</h4><p>Hardwood, LVP, tile &amp; carpet — installed right the first time.</p></div>
+    <div class="service-card" onclick="goTo('renovations')"><div class="service-icon">🏗️</div><h4>General Contracting</h4><p>Basement finishing, decks, additions &amp; full home renovations.</p></div>
+  </div>
+</section>
+
+<div class="cities-section" id="cities">
+  <div class="city-block"><div class="city-flag">🌊</div><h3>Moncton</h3><div class="province">New Brunswick · NB</div><p>Serving Moncton, Riverview, Dieppe and surrounding Greater Moncton communities. From older homes to new Riverview builds — we know the local market.</p><div class="city-trades"><span class="trade-tag">Roofing</span><span class="trade-tag">Heating</span><span class="trade-tag">Plumbing</span><span class="trade-tag">Renovations</span><span class="trade-tag">Electrical</span></div></div>
+  <div class="city-block"><div class="city-flag">⚓</div><h3>Halifax</h3><div class="province">Nova Scotia · NS</div><p>Serving Halifax, Dartmouth, Bedford and the HRM. Heritage homes on the peninsula or new builds in Hammonds Plains — we've got local pros ready.</p><div class="city-trades"><span class="trade-tag">Electrical</span><span class="trade-tag">Plumbing</span><span class="trade-tag">Roofing</span><span class="trade-tag">Kitchens</span><span class="trade-tag">HVAC</span></div></div>
+</div>
+
+<section class="reviews-section" id="reviews">
+  <div class="section-eyebrow">Homeowner Reviews</div>
+  <h2 class="section-h2">Real People. <em>Real Results.</em></h2>
+  <div class="trust-grid">
+    <div class="trust-card"><div class="stars">★★★★★</div><blockquote>"Found a great roofer in Moncton within a day. He fixed our leak before the next rain came through. No upsell, fair price. Really happy with the service."</blockquote><div class="reviewer">Diane L. <span>— Riverview, NB · Roofing</span></div></div>
+    <div class="trust-card"><div class="stars">★★★★★</div><blockquote>"Our basement reno turned out amazing. The contractor they matched us with was professional and communicated all the way through. Worth every penny."</blockquote><div class="reviewer">Paul &amp; Kim T. <span>— Halifax, NS · Basement Finishing</span></div></div>
+    <div class="trust-card"><div class="stars">★★★★★</div><blockquote>"Heat pump installed before winter hit. The electrician and HVAC tech worked together seamlessly. I'll be using this site again for our bathroom next spring."</blockquote><div class="reviewer">Andrea M. <span>— Dartmouth, NS · HVAC</span></div></div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div><h2>Ready to Start Your <em>Project?</em></h2><p>Free quotes from verified local contractors in Moncton and Halifax — no sign-up required.</p></div>
+  <button class="btn-gold" style="padding:16px 40px;font-size:16px;" onclick="scrollTo('get-quote')">Get Free Quotes →</button>
+</div>
+
+</div><!-- end page-home -->
+
+
+<!-- ═══════════════════════════════════════
+     ROOFING PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-roofing">
+<div class="page-hero"><div class="section-eyebrow">Roofing Services</div><h1>Trusted <em>Roofing</em><br>Contractors</h1><div class="gold-bar"></div><p>Connect with vetted, licensed roofing contractors in Moncton and Halifax. Free quotes, no pressure.</p></div>
+<div class="page-body">
+  <h2 class="section-h2">Roofing Services We <em>Connect You With</em></h2>
+  <p class="section-lead">From small leak repairs to full roof replacements — our network of local roofing pros covers every job, every season in Maritime Canada.</p>
+  <div class="svc-detail-grid">
+    <div class="svc-box"><h3>🏠 Roof Replacement</h3><p>Full shingle, metal, or flat roof replacement. Licensed pros with manufacturer warranties available.</p></div>
+    <div class="svc-box"><h3>🔧 Leak Repair</h3><p>Fast diagnosis and repair of active leaks before they cause further interior damage.</p></div>
+    <div class="svc-box"><h3>❄️ Ice Dam Prevention</h3><p>Atlantic winters are hard on roofs. Our pros know Maritime weather and how to protect your home.</p></div>
+    <div class="svc-box"><h3>🏗️ Flat Roofing</h3><p>TPO, EPDM, and modified bitumen systems installed and maintained by certified specialists.</p></div>
+    <div class="svc-box"><h3>🪟 Skylights</h3><p>Installation, replacement, and leak sealing around existing skylights.</p></div>
+    <div class="svc-box"><h3>🌧️ Gutters &amp; Eavestroughs</h3><p>Gutter installation, cleaning, and repair to keep water away from your foundation.</p></div>
+  </div>
+  <div class="divider"></div>
+  <h2 class="section-h2">Typical Costs in <em>Moncton &amp; Halifax</em></h2>
+  <p class="section-lead">Rough estimates — your quote depends on roof size, material, and access. Getting 3 quotes is the best way to know your real cost.</p>
+  <table><tr><th>Service</th><th>Typical Range (CAD)</th><th>Notes</th></tr>
+  <tr><td>Leak repair (minor)</td><td>$200 – $600</td><td>Depends on access and scope</td></tr>
+  <tr><td>Full shingle replacement</td><td>$5,000 – $14,000</td><td>Average home, 1,500–2,000 sq ft</td></tr>
+  <tr><td>Flat roof (garage / commercial)</td><td>$3,000 – $9,000</td><td>Per 1,000 sq ft</td></tr>
+  <tr><td>Gutter installation</td><td>$800 – $2,500</td><td>Full perimeter, aluminium</td></tr>
+  <tr><td>Skylight install</td><td>$900 – $2,500</td><td>Includes flashing</td></tr></table>
+  <div class="divider"></div>
+  <h2 class="section-h2">Get Your Free <em>Roofing Quote</em></h2>
+  <p class="section-lead">Up to 3 licensed roofers in Moncton or Halifax will contact you within 24 hours.</p>
+  <div class="card" style="max-width:560px;border-left-color:var(--ocean);">
+    <div id="rfForm">
+      <div class="form-group"><label>Your Name</label><input type="text" id="rfName" placeholder="Jane Doe"></div>
+      <div class="form-row"><div class="form-group"><label>Phone</label><input type="tel" id="rfPhone" placeholder="(506) 000-0000"></div><div class="form-group"><label>City</label><select id="rfCity"><option value="">Select</option><option>Moncton, NB</option><option>Riverview, NB</option><option>Dieppe, NB</option><option>Halifax, NS</option><option>Dartmouth, NS</option><option>Bedford, NS</option></select></div></div>
+      <div class="form-group"><label>Email</label><input type="email" id="rfEmail" placeholder="you@email.com"></div>
+      <div class="form-group"><label>Project Description</label><textarea id="rfDesc" placeholder="e.g. leak above bedroom, ~20yr old shingles, may need full replacement…"></textarea></div>
+      <button class="submit-btn" onclick="submitSvc('rf','Roofing')">Get My Free Roofing Quotes →</button>
+      <p class="form-note">🔒 Free for homeowners. Your info is never sold.</p>
+    </div>
+    <div class="success-msg" id="rfSuccess"><h3>✅ Request Received!</h3><p>Up to 3 local roofing contractors will contact you within 24 hours.</p></div>
+  </div>
+</div>
+<div class="cta-band"><div><h2>Need a Different <em>Trade?</em></h2><p>We cover plumbing, electrical, HVAC, renovations and more.</p></div><button class="btn-gold" onclick="goTo('home');scrollTo('services')">See All Services →</button></div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     PLUMBING PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-plumbing">
+<div class="page-hero"><div class="section-eyebrow">Plumbing Services</div><h1>Licensed <em>Plumbers</em><br>Near You</h1><div class="gold-bar"></div><p>Get free quotes from vetted plumbers in Moncton and Halifax. From emergency leaks to full plumbing installs.</p></div>
+<div class="page-body">
+  <h2 class="section-h2">Plumbing Services We <em>Connect You With</em></h2>
+  <p class="section-lead">Emergency or planned — our network of licensed NB and NS plumbers handles it all.</p>
+  <div class="svc-detail-grid">
+    <div class="svc-box"><h3>🚿 Fixture Installation</h3><p>Toilets, sinks, faucets, showers, and tubs installed correctly the first time.</p></div>
+    <div class="svc-box"><h3>💧 Leak Detection &amp; Repair</h3><p>Fast leak diagnosis including hidden pipe leaks before they cause serious water damage.</p></div>
+    <div class="svc-box"><h3>🔥 Water Heater</h3><p>Tank and tankless hot water heater installation, replacement, and repair.</p></div>
+    <div class="svc-box"><h3>🧹 Drain Cleaning</h3><p>Clogged drains, main line cleaning, and root intrusion cleared professionally.</p></div>
+    <div class="svc-box"><h3>🏠 Pipe Replacement</h3><p>Old cast iron, galvanized, or polybutylene pipe replacement with modern materials.</p></div>
+    <div class="svc-box"><h3>🌡️ Pipe Winterization</h3><p>Essential in Maritime Canada — protect your pipes before temperatures drop.</p></div>
+  </div>
+  <div class="divider"></div>
+  <h2 class="section-h2">Typical Costs in <em>Moncton &amp; Halifax</em></h2>
+  <table><tr><th>Service</th><th>Typical Range (CAD)</th><th>Notes</th></tr>
+  <tr><td>Service call / diagnostic</td><td>$100 – $200</td><td>Often waived if work is booked</td></tr>
+  <tr><td>Toilet install / replace</td><td>$200 – $450</td><td>Supply not included</td></tr>
+  <tr><td>Water heater replacement</td><td>$900 – $2,200</td><td>Tank vs tankless varies widely</td></tr>
+  <tr><td>Drain cleaning</td><td>$150 – $400</td><td>More for main line</td></tr>
+  <tr><td>Full bathroom rough-in</td><td>$2,500 – $5,500</td><td>New construction or addition</td></tr></table>
+  <div class="divider"></div>
+  <h2 class="section-h2">Get Your Free <em>Plumbing Quote</em></h2>
+  <div class="card" style="max-width:560px;border-left-color:var(--ocean);">
+    <div id="plForm">
+      <div class="form-group"><label>Your Name</label><input type="text" id="plName" placeholder="Jane Doe"></div>
+      <div class="form-row"><div class="form-group"><label>Phone</label><input type="tel" id="plPhone" placeholder="(506) 000-0000"></div><div class="form-group"><label>City</label><select id="plCity"><option value="">Select</option><option>Moncton, NB</option><option>Riverview, NB</option><option>Dieppe, NB</option><option>Halifax, NS</option><option>Dartmouth, NS</option><option>Bedford, NS</option></select></div></div>
+      <div class="form-group"><label>Email</label><input type="email" id="plEmail" placeholder="you@email.com"></div>
+      <div class="form-group"><label>Project Description</label><textarea id="plDesc" placeholder="e.g. slow drain in kitchen, water heater making noise, new toilet install…"></textarea></div>
+      <button class="submit-btn" onclick="submitSvc('pl','Plumbing')">Get My Free Plumbing Quotes →</button>
+      <p class="form-note">🔒 Free for homeowners. Your info is never sold.</p>
+    </div>
+    <div class="success-msg" id="plSuccess"><h3>✅ Request Received!</h3><p>Licensed plumbers in your area will contact you within 24 hours.</p></div>
+  </div>
+</div>
+<div class="cta-band"><div><h2>Need a Different <em>Trade?</em></h2><p>We cover roofing, electrical, HVAC, renovations and more.</p></div><button class="btn-gold" onclick="goTo('home');scrollTo('services')">See All Services →</button></div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     ELECTRICAL PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-electrical">
+<div class="page-hero"><div class="section-eyebrow">Electrical Services</div><h1>Licensed <em>Electricians</em><br>in Moncton &amp; Halifax</h1><div class="gold-bar"></div><p>Safe, code-compliant electrical work from vetted local electricians. Free quotes for any job.</p></div>
+<div class="page-body">
+  <h2 class="section-h2">Electrical Services We <em>Connect You With</em></h2>
+  <p class="section-lead">All electrical work must be permitted and inspected in New Brunswick and Nova Scotia. Our electricians know the code.</p>
+  <div class="svc-detail-grid">
+    <div class="svc-box"><h3>⚡ Panel Upgrades</h3><p>200-amp panel upgrades for older homes — required for EV chargers, hot tubs, and modern appliances.</p></div>
+    <div class="svc-box"><h3>🔌 Outlets &amp; Switches</h3><p>New outlet installation, GFCI upgrades, USB outlets, and smart switch wiring.</p></div>
+    <div class="svc-box"><h3>🚗 EV Charger Install</h3><p>Level 2 home EV charger installation — permits pulled and inspected.</p></div>
+    <div class="svc-box"><h3>💡 Lighting</h3><p>Pot lights, under-cabinet lighting, exterior security lighting, and fixture replacement.</p></div>
+    <div class="svc-box"><h3>🏗️ Renovation Wiring</h3><p>Complete wiring for kitchen and bathroom renovations, basement finishing, and additions.</p></div>
+    <div class="svc-box"><h3>🔋 Generator Hookup</h3><p>Standby and portable generator transfer switch installation.</p></div>
+  </div>
+  <div class="divider"></div>
+  <h2 class="section-h2">Typical Costs in <em>Moncton &amp; Halifax</em></h2>
+  <table><tr><th>Service</th><th>Typical Range (CAD)</th><th>Notes</th></tr>
+  <tr><td>Panel upgrade (100A to 200A)</td><td>$1,800 – $3,500</td><td>Includes permit and inspection</td></tr>
+  <tr><td>EV charger installation</td><td>$700 – $1,500</td><td>Level 2, 240V circuit</td></tr>
+  <tr><td>New outlet installation</td><td>$150 – $350 each</td><td>Depends on access</td></tr>
+  <tr><td>Pot light installation</td><td>$100 – $200 per light</td><td>Wiring included</td></tr>
+  <tr><td>Basement wiring (full)</td><td>$2,500 – $6,000</td><td>Rough-in + fixtures</td></tr></table>
+  <div class="divider"></div>
+  <h2 class="section-h2">Get Your Free <em>Electrical Quote</em></h2>
+  <div class="card" style="max-width:560px;border-left-color:var(--ocean);">
+    <div id="elForm">
+      <div class="form-group"><label>Your Name</label><input type="text" id="elName" placeholder="Jane Doe"></div>
+      <div class="form-row"><div class="form-group"><label>Phone</label><input type="tel" id="elPhone" placeholder="(902) 000-0000"></div><div class="form-group"><label>City</label><select id="elCity"><option value="">Select</option><option>Moncton, NB</option><option>Riverview, NB</option><option>Dieppe, NB</option><option>Halifax, NS</option><option>Dartmouth, NS</option><option>Bedford, NS</option></select></div></div>
+      <div class="form-group"><label>Email</label><input type="email" id="elEmail" placeholder="you@email.com"></div>
+      <div class="form-group"><label>Project Description</label><textarea id="elDesc" placeholder="e.g. panel upgrade needed, want EV charger installed, add pot lights…"></textarea></div>
+      <button class="submit-btn" onclick="submitSvc('el','Electrical')">Get My Free Electrical Quotes →</button>
+      <p class="form-note">🔒 Free for homeowners. Your info is never sold.</p>
+    </div>
+    <div class="success-msg" id="elSuccess"><h3>✅ Request Received!</h3><p>Licensed electricians in your area will contact you within 24 hours.</p></div>
+  </div>
+</div>
+<div class="cta-band"><div><h2>Need a Different <em>Trade?</em></h2><p>We cover roofing, plumbing, HVAC, renovations and more.</p></div><button class="btn-gold" onclick="goTo('home');scrollTo('services')">See All Services →</button></div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     HVAC PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-hvac">
+<div class="page-hero"><div class="section-eyebrow">HVAC Services</div><h1>Heat Pumps, Furnaces<br>&amp; <em>HVAC</em> in the Maritimes</h1><div class="gold-bar"></div><p>Find trusted HVAC contractors in Moncton and Halifax for installs, repairs, and maintenance.</p></div>
+<div class="page-body">
+  <h2 class="section-h2">HVAC Services We <em>Connect You With</em></h2>
+  <p class="section-lead">Maritime Canada's climate demands reliable heating. Our HVAC network covers heat pumps, furnaces, and everything in between.</p>
+  <div class="svc-detail-grid">
+    <div class="svc-box"><h3>🌡️ Heat Pump Installation</h3><p>Mini-split and ducted heat pump installation — eligible for NB Power and NS rebates of up to $3,000.</p></div>
+    <div class="svc-box"><h3>🔥 Furnace Repair &amp; Replace</h3><p>Oil, gas, and electric furnace diagnostics, repair, and full replacement.</p></div>
+    <div class="svc-box"><h3>❄️ Central AC</h3><p>Central air conditioning installation, refrigerant top-up, and system servicing.</p></div>
+    <div class="svc-box"><h3>🧹 Duct Cleaning</h3><p>Full ductwork cleaning improves air quality and system efficiency — recommended every 3–5 years.</p></div>
+    <div class="svc-box"><h3>🔧 Maintenance Plans</h3><p>Annual tune-ups and filter changes to keep your system running efficiently all year.</p></div>
+    <div class="svc-box"><h3>💨 HRV / ERV Ventilation</h3><p>Heat recovery ventilator installation for modern airtight homes in Maritime Canada.</p></div>
+  </div>
+  <div class="divider"></div>
+  <div class="card blue"><h3>💡 NB &amp; NS Heat Pump Rebates</h3><p>Both New Brunswick and Nova Scotia offer significant rebates for heat pump installation. NB Power offers up to $2,000 and Efficiency Nova Scotia up to $3,000 depending on the system. Our contractors are familiar with the rebate process and can help you apply.</p></div>
+  <div class="divider"></div>
+  <h2 class="section-h2">Typical Costs in <em>Moncton &amp; Halifax</em></h2>
+  <table><tr><th>Service</th><th>Typical Range (CAD)</th><th>Notes</th></tr>
+  <tr><td>Mini-split heat pump (single zone)</td><td>$2,500 – $5,000</td><td>Before rebates</td></tr>
+  <tr><td>Ducted heat pump system</td><td>$6,000 – $14,000</td><td>Whole-home, before rebates</td></tr>
+  <tr><td>Furnace replacement</td><td>$3,000 – $6,500</td><td>Oil or gas, installed</td></tr>
+  <tr><td>AC installation (central)</td><td>$3,500 – $7,000</td><td>Existing ductwork required</td></tr>
+  <tr><td>Duct cleaning</td><td>$300 – $600</td><td>Average home</td></tr></table>
+  <div class="divider"></div>
+  <h2 class="section-h2">Get Your Free <em>HVAC Quote</em></h2>
+  <div class="card" style="max-width:560px;border-left-color:var(--ocean);">
+    <div id="hvForm">
+      <div class="form-group"><label>Your Name</label><input type="text" id="hvName" placeholder="Jane Doe"></div>
+      <div class="form-row"><div class="form-group"><label>Phone</label><input type="tel" id="hvPhone" placeholder="(506) 000-0000"></div><div class="form-group"><label>City</label><select id="hvCity"><option value="">Select</option><option>Moncton, NB</option><option>Riverview, NB</option><option>Dieppe, NB</option><option>Halifax, NS</option><option>Dartmouth, NS</option><option>Bedford, NS</option></select></div></div>
+      <div class="form-group"><label>Email</label><input type="email" id="hvEmail" placeholder="you@email.com"></div>
+      <div class="form-group"><label>Project Description</label><textarea id="hvDesc" placeholder="e.g. want heat pump installed, furnace not working, need duct cleaning…"></textarea></div>
+      <button class="submit-btn" onclick="submitSvc('hv','HVAC')">Get My Free HVAC Quotes →</button>
+      <p class="form-note">🔒 Free for homeowners. Your info is never sold.</p>
+    </div>
+    <div class="success-msg" id="hvSuccess"><h3>✅ Request Received!</h3><p>Local HVAC contractors will contact you within 24 hours.</p></div>
+  </div>
+</div>
+<div class="cta-band"><div><h2>Need a Different <em>Trade?</em></h2><p>We cover roofing, plumbing, electrical, renovations and more.</p></div><button class="btn-gold" onclick="goTo('home');scrollTo('services')">See All Services →</button></div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     RENOVATIONS PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-renovations">
+<div class="page-hero"><div class="section-eyebrow">Renovation Services</div><h1>Home <em>Renovations</em><br>Done Right</h1><div class="gold-bar"></div><p>Kitchens, bathrooms, basements, decks — connect with trusted local renovation contractors in Moncton and Halifax.</p></div>
+<div class="page-body">
+  <h2 class="section-h2">Renovation Services We <em>Connect You With</em></h2>
+  <p class="section-lead">Whatever's on your project list — our general contractors and trade specialists handle it all.</p>
+  <div class="svc-detail-grid">
+    <div class="svc-box"><h3>🍳 Kitchen Renovations</h3><p>Cabinet refacing or replacement, countertops, backsplash, layout changes, and full gut renos.</p></div>
+    <div class="svc-box"><h3>🛁 Bathroom Renovations</h3><p>Walk-in showers, soaker tubs, tile work, vanity upgrades, and full remodels.</p></div>
+    <div class="svc-box"><h3>🏗️ Basement Finishing</h3><p>Transform an unfinished basement into living space — family rooms, offices, or in-law suites.</p></div>
+    <div class="svc-box"><h3>🪵 Flooring</h3><p>Hardwood, LVP, tile, and carpet supply and installation across all rooms.</p></div>
+    <div class="svc-box"><h3>🌿 Decks &amp; Fences</h3><p>Pressure-treated, composite, and cedar deck builds and fence installation.</p></div>
+    <div class="svc-box"><h3>🏠 Additions &amp; Dormers</h3><p>Home additions, garage conversions, and dormer additions to add living space.</p></div>
+  </div>
+  <div class="divider"></div>
+  <h2 class="section-h2">Typical Costs in <em>Moncton &amp; Halifax</em></h2>
+  <table><tr><th>Project</th><th>Typical Range (CAD)</th><th>Notes</th></tr>
+  <tr><td>Kitchen renovation (mid-range)</td><td>$18,000 – $45,000</td><td>New cabinets, counters, appliances</td></tr>
+  <tr><td>Bathroom renovation (full)</td><td>$12,000 – $28,000</td><td>Tile, fixtures, vanity</td></tr>
+  <tr><td>Basement finishing</td><td>$25,000 – $55,000</td><td>Per 1,000 sq ft finished</td></tr>
+  <tr><td>Deck build (pressure treated)</td><td>$6,000 – $18,000</td><td>16x16 ft, stairs included</td></tr>
+  <tr><td>Flooring (LVP, installed)</td><td>$4 – $9 per sq ft</td><td>Material + labour</td></tr></table>
+  <div class="divider"></div>
+  <h2 class="section-h2">Get Your Free <em>Renovation Quote</em></h2>
+  <div class="card" style="max-width:560px;border-left-color:var(--ocean);">
+    <div id="rvForm">
+      <div class="form-group"><label>Your Name</label><input type="text" id="rvName" placeholder="Jane Doe"></div>
+      <div class="form-row"><div class="form-group"><label>Phone</label><input type="tel" id="rvPhone" placeholder="(506) 000-0000"></div><div class="form-group"><label>City</label><select id="rvCity"><option value="">Select</option><option>Moncton, NB</option><option>Riverview, NB</option><option>Dieppe, NB</option><option>Halifax, NS</option><option>Dartmouth, NS</option><option>Bedford, NS</option></select></div></div>
+      <div class="form-group"><label>Email</label><input type="email" id="rvEmail" placeholder="you@email.com"></div>
+      <div class="form-group"><label>Project Type</label><select id="rvService"><option value="">Select</option><option>Kitchen Renovation</option><option>Bathroom Renovation</option><option>Basement Finishing</option><option>Deck / Fence</option><option>Flooring</option><option>Home Addition</option><option>Other</option></select></div>
+      <div class="form-group"><label>Project Description</label><textarea id="rvDesc" placeholder="e.g. full kitchen gut reno, 10x10 space, want quartz counters and new cabinets…"></textarea></div>
+      <button class="submit-btn" onclick="submitSvc('rv','Renovations')">Get My Free Renovation Quotes →</button>
+      <p class="form-note">🔒 Free for homeowners. Your info is never sold.</p>
+    </div>
+    <div class="success-msg" id="rvSuccess"><h3>✅ Request Received!</h3><p>Local renovation contractors will contact you within 24 hours.</p></div>
+  </div>
+</div>
+<div class="cta-band"><div><h2>Need a Different <em>Trade?</em></h2><p>We cover roofing, plumbing, electrical, HVAC and more.</p></div><button class="btn-gold" onclick="goTo('home');scrollTo('services')">See All Services →</button></div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     ABOUT PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-about">
+<div class="page-hero"><div class="section-eyebrow">Our Story</div><h1>Built in the Maritimes,<br><em>For the Maritimes.</em></h1><div class="gold-bar"></div><p>Sample text — add your real story here. We started Maritime Pro Connect because finding a trustworthy local contractor should be simple.</p></div>
+<div class="page-body">
+  <h2 class="section-h2">Why We <em>Built This</em></h2>
+  <p class="section-lead">Sample text — replace this with your actual story. Every homeowner in Maritime Canada has a story about a contractor who didn't call back. We built Maritime Pro Connect to change that.</p>
+  <div class="grid-2">
+    <div class="card"><h3>🌊 Born in the Maritimes</h3><p>Sample text — add details about being local to Moncton or Halifax. We live here, we know the neighbourhoods, and we understand what homeowners in Maritime Canada actually need.</p></div>
+    <div class="card blue"><h3>🤝 Built on Trust</h3><p>Sample text — describe your contractor verification process. Every contractor in our network is verified for licensing and insurance before we ever send them a homeowner lead.</p></div>
+  </div>
+  <div class="divider"></div>
+  <h2 class="section-h2">Our <em>Team</em></h2>
+  <p class="section-lead">Sample text — add your real names, photos, and bios here.</p>
+  <div class="team-grid">
+    <div class="team-card"><div class="team-avatar">👤</div><h3>[Your Name Here]</h3><div class="team-role">Co-Founder — Operations · Moncton, NB</div><p>Sample text — describe your role. Manages the platform, lead matching, contractor onboarding, and day-to-day operations.</p></div>
+    <div class="team-card"><div class="team-avatar">👤</div><h3>[Partner's Name Here]</h3><div class="team-role">Co-Founder — Partnerships · Halifax, NS</div><p>Sample text — describe your partner's role. Builds and maintains relationships with licensed contractors across both cities.</p></div>
+  </div>
+  <div class="divider"></div>
+  <h2 class="section-h2">What We <em>Stand For</em></h2>
+  <div class="value-grid">
+    <div class="value-box"><h4>🔍 Transparency</h4><p>No hidden fees for homeowners, ever. Contractors know exactly what they're paying for. No surprises.</p></div>
+    <div class="value-box"><h4>⚡ Speed</h4><p>Leads are delivered within the hour. Homeowners hear from contractors within 24 hours. We move fast.</p></div>
+    <div class="value-box"><h4>🏡 Local First</h4><p>We only work with contractors who are based in Moncton or Halifax. No out-of-province companies parachuting in.</p></div>
+  </div>
+</div>
+<div class="cta-band"><div><h2>Ready to Find a <em>Contractor?</em></h2><p>Free quotes from verified local pros — no sign-up required.</p></div><button class="btn-gold" onclick="goTo('home');setTimeout(()=>scrollTo('get-quote'),100)">Get Free Quotes →</button></div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     BLOG PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-blog">
+<div class="page-hero"><div class="section-eyebrow">Maritime Canada Home Tips</div><h1>The Atlantic Pro<br><em>Connect Blog</em></h1><div class="gold-bar"></div><p>Contractor tips, seasonal home maintenance advice, cost guides, and renovation inspiration for Moncton and Halifax homeowners.</p></div>
+<div class="page-body">
+  <h2 class="section-h2">Latest <em>Articles</em></h2>
+  <p class="section-lead">Practical guides written for Maritime homeowner homeowners. Add your real blog posts here as you write them.</p>
+  <div class="blog-grid">
+    <div class="blog-card" onclick="goTo('blog-roofing')"><div class="blog-thumb" style="background:var(--ocean);">🏠</div><div class="blog-body"><div class="blog-cat">Roofing · Moncton</div><h3>5 Best Roofing Contractors in Moncton, NB (2026)</h3><p>How to find a licensed, insured roofer in Moncton — and what to look for before signing anything.</p><div class="blog-meta">May 2026 · 5 min read</div></div></div>
+    <div class="blog-card" onclick="goTo('blog-heatpump')"><div class="blog-thumb" style="background:#1e3a5f;">🌡️</div><div class="blog-body"><div class="blog-cat">HVAC · New Brunswick</div><h3>NB Heat Pump Rebates 2026 — What You Actually Get</h3><p>NB Power offers up to $2,000 back on qualifying heat pump installs. Here's exactly how to claim it.</p><div class="blog-meta">April 2026 · 6 min read</div></div></div>
+    <div class="blog-card" onclick="goTo('blog-quotes')"><div class="blog-thumb" style="background:#2d4a3e;">📋</div><div class="blog-body"><div class="blog-cat">Tips · All Trades</div><h3>How to Get Contractor Quotes in Moncton Without the Runaround</h3><p>Why contractors ghost homeowners, how to avoid it, and why getting 3 quotes always saves money.</p><div class="blog-meta">March 2026 · 4 min read</div></div></div>
+    <div class="blog-card" onclick="goTo('blog-plumbers')"><div class="blog-thumb" style="background:#3a2a1a;">🔧</div><div class="blog-body"><div class="blog-cat">Plumbing · Halifax</div><h3>Top Plumbers in Halifax, NS — Licensed &amp; Reviewed</h3><p>What a licensed plumber in Nova Scotia must carry, and how to verify before they start work.</p><div class="blog-meta">March 2026 · 5 min read</div></div></div>
+    <div class="blog-card" onclick="goTo('blog-ev')"><div class="blog-thumb" style="background:#1a3a2a;">⚡</div><div class="blog-body"><div class="blog-cat">Electrical · Halifax</div><h3>EV Charger Installation in Halifax — Cost &amp; What to Expect</h3><p>Everything you need to know about installing a Level 2 home EV charger in Nova Scotia.</p><div class="blog-meta">February 2026 · 5 min read</div></div></div>
+    <div class="blog-card" onclick="goTo('blog-bathroom')"><div class="blog-thumb" style="background:#2a1a3a;">🛁</div><div class="blog-body"><div class="blog-cat">Renovations · Cost Guide</div><h3>Bathroom Renovation in Moncton — Average Costs 2026</h3><p>What a mid-range bathroom reno actually costs in Moncton today, broken down by trade.</p><div class="blog-meta">January 2026 · 6 min read</div></div></div>
+  </div>
+  <div class="card" style="text-align:center;border-left:none;border-top:4px solid var(--gold);">
+    <h3 style="margin-bottom:8px;">📬 Monthly Home Tips for Maritime Canada</h3>
+    <p style="margin-bottom:20px;font-size:15px;color:var(--slate);font-weight:300;">One practical email per month — seasonal checklists, cost guides, contractor tips. No spam.</p>
+    <div style="display:flex;gap:12px;max-width:440px;margin:0 auto;flex-wrap:wrap;">
+      <input type="email" id="blogEmail" placeholder="your@email.com" style="flex:1;min-width:200px;padding:12px;border:1.5px solid #d0d8e4;font-size:14px;outline:none;">
+      <button onclick="blogSub()" style="background:var(--navy);color:var(--gold);border:none;padding:12px 24px;font-weight:700;cursor:pointer;white-space:nowrap;">Subscribe</button>
+    </div>
+    <div id="blogSubMsg" style="display:none;margin-top:14px;color:var(--sage);font-weight:700;">✓ You're subscribed!</div>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     CONTACT PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-contact">
+<div class="page-hero"><div class="section-eyebrow">Get in Touch</div><h1>Questions? We're<br><em>Here to Help.</em></h1><div class="gold-bar"></div><p>Reach out to the Maritime Pro Connect team — whether you're a homeowner with a question or a contractor interested in joining.</p></div>
+<div class="page-body">
+  <div class="grid-2">
+    <div>
+      <h2 class="section-h2">Send Us a <em>Message</em></h2>
+      <p class="section-lead">Fill out the form and we'll get back to you within one business day.</p>
+      <div class="card" style="border-left-color:var(--ocean);">
+        <div id="ctForm">
+          <div class="form-group"><label>Your Name</label><input type="text" id="ctName" placeholder="Jane Doe"></div>
+          <div class="form-group"><label>Phone</label><input type="tel" id="ctPhone" placeholder="(506) 000-0000"></div>
+          <div class="form-group"><label>Email</label><input type="email" id="ctEmail" placeholder="you@email.com"></div>
+          <div class="form-group"><label>I am a...</label>
+            <select id="ctType"><option value="">Select</option><option>Homeowner looking for a contractor</option><option>Contractor interested in joining</option><option>General inquiry</option></select>
+          </div>
+          <div class="form-group"><label>Message</label><textarea id="ctMsg" placeholder="How can we help you?"></textarea></div>
+          <button class="submit-btn" onclick="submitContact()">Send Message →</button>
+        </div>
+        <div class="success-msg" id="ctSuccess"><h3>✅ Message Sent!</h3><p>We'll get back to you within one business day. Thanks for reaching out!</p></div>
+      </div>
+    </div>
+    <div>
+      <h2 class="section-h2">Other Ways to <em>Reach Us</em></h2>
+      <p class="section-lead">We're a local team — we actually pick up.</p>
+      <div class="card" style="margin-bottom:16px;"><h3>📞 Phone</h3><p>[Add your phone number here] — Call or text Mon–Fri, 8am–6pm AST. We aim to respond to texts within 2 hours.</p></div>
+      <div class="card" style="margin-bottom:16px;"><h3>📧 Email</h3><p>[Add your email here] — We check it every morning and respond within one business day.</p></div>
+      <div class="card" style="margin-bottom:16px;"><h3>🏗️ For Contractors</h3><p>Looking to join our contractor network? Visit our <span onclick="window.location.href='contractors.html'" style="color:var(--ocean);font-weight:600;cursor:pointer;">contractor page</span> to apply and learn about pricing.</p></div>
+      <div class="card"><h3>📍 Serving</h3><p>Moncton · Riverview · Dieppe · Halifax · Dartmouth · Bedford and surrounding communities in New Brunswick and Nova Scotia.</p></div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     PRIVACY POLICY
+═══════════════════════════════════════ -->
+<div class="page" id="page-privacy">
+<div class="page-hero"><div class="section-eyebrow">Legal</div><h1>Privacy <em>Policy</em></h1><div class="gold-bar"></div><p>How Maritime Pro Connect collects, uses, and protects your personal information. Effective May 1, 2026.</p></div>
+<div class="page-body">
+<div class="legal-body">
+<p>This Privacy Policy explains how Maritime Pro Connect ("we," "us," or "our") collects, uses, and protects the personal information you provide when using our website at maritimeproconnect.ca. By using our website, you consent to the practices described in this policy.</p>
+<h3>1. Information We Collect</h3>
+<p>When you submit a quote request or contractor application through our website, we collect the following personal information:</p>
+<ul><li>Full name</li><li>Phone number</li><li>Email address</li><li>City and province</li><li>Project description and trade type</li><li>Business name and license number (contractors only)</li></ul>
+<p>We may also collect non-personal information such as browser type, pages visited, and time spent on the site for the purpose of improving our service.</p>
+<h3>2. How We Use Your Information</h3>
+<p>We use your information solely to:</p>
+<ul><li>Match homeowner requests to qualified local contractors in your area</li><li>Share your contact information with up to three (3) pre-screened contractors who operate in your city</li><li>Send confirmation and follow-up communications related to your request</li><li>Improve our matching and service quality over time</li></ul>
+<p>We will never use your information for unrelated marketing without your express consent.</p>
+<h3>3. Who We Share Your Information With</h3>
+<p>We share homeowner information only with contractors who are active, verified members of our network and who operate in your city and trade. We do not sell, rent, or trade your personal information to third parties, advertisers, or data brokers under any circumstances.</p>
+<h3>4. Data Storage and Security</h3>
+<p>Your information is stored securely using Google Workspace services with restricted access limited to Maritime Pro Connect team members only. We use industry-standard security practices to protect your data. We retain your information for up to 24 months from the date of submission, after which it is permanently deleted unless you have an ongoing relationship with us.</p>
+<h3>5. Your Rights Under PIPEDA</h3>
+<p>Under Canada's Personal Information Protection and Electronic Documents Act (PIPEDA), you have the right to:</p>
+<ul><li>Know what personal information we hold about you and how it is used</li><li>Access the personal information we hold about you upon written request</li><li>Request correction of inaccurate or incomplete information</li><li>Withdraw consent and request deletion of your information at any time</li><li>File a complaint with the Office of the Privacy Commissioner of Canada if you believe your rights have been violated</li></ul>
+<p>To exercise any of these rights, contact us at: <strong>hello@maritimeproconnect.ca</strong></p>
+<h3>6. Cookies and Analytics</h3>
+<p>Our website may use basic, privacy-respecting analytics tools to understand aggregate traffic patterns. We do not use third-party advertising cookies or tracking pixels. Any analytics data collected is anonymous and cannot be used to identify individual users.</p>
+<h3>7. Third-Party Links</h3>
+<p>Our website may contain links to third-party websites such as Netlify or Google services. This Privacy Policy applies only to maritimeproconnect.ca. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+<h3>8. Changes to This Policy</h3>
+<p>We may update this Privacy Policy from time to time. When we do, we will update the effective date at the top of this page. Continued use of our website after changes constitutes acceptance of the updated policy.</p>
+<h3>9. Contact Our Privacy Officer</h3>
+<p>For any privacy-related questions, consent withdrawal, or data requests:<br><strong>Email:</strong> hello@maritimeproconnect.ca<br><strong>Address:</strong> Maritime Pro Connect, Moncton, New Brunswick, Canada</p>
+</div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     TERMS OF USE
+═══════════════════════════════════════ -->
+<div class="page" id="page-terms">
+<div class="page-hero"><div class="section-eyebrow">Legal</div><h1>Terms of <em>Use</em></h1><div class="gold-bar"></div><p>The terms governing your use of the Maritime Pro Connect website and services. Effective May 1, 2026.</p></div>
+<div class="page-body">
+<div class="legal-body">
+<p>Please read these Terms of Use ("Terms") carefully before using the Maritime Pro Connect website located at maritimeproconnect.ca ("the Site"). By accessing or using the Site, you agree to be bound by these Terms. If you do not agree, please do not use the Site.</p>
+<h3>1. Description of Service</h3>
+<p>Maritime Pro Connect is a lead generation and contractor referral service that connects homeowners in Moncton (NB) and Halifax (NS) with licensed local contractors. We do not perform contracting work ourselves and are not a party to any agreement, contract, or dispute between homeowners and contractors.</p>
+<h3>2. Free Service for Homeowners</h3>
+<p>Our service is completely free for homeowners. You will never be charged a fee to submit a project request, receive contractor quotes, or use any feature of our platform as a homeowner. Maritime Pro Connect generates revenue by charging contractors for access to homeowner leads.</p>
+<h3>3. Eligibility</h3>
+<p>By using this Site, you represent that you are at least 18 years of age and have the legal capacity to enter into agreements. The Site is intended for use by residents of New Brunswick and Nova Scotia, Canada.</p>
+<h3>4. Accuracy of Information Submitted</h3>
+<p>You agree to provide accurate, current, and truthful information when submitting a quote request or any other form on this Site. Submitting false, misleading, or fraudulent information may result in your removal from our system and may constitute a violation of applicable law.</p>
+<h3>5. No Guarantee of Contractor Performance</h3>
+<p>While we verify that contractors in our network hold valid licenses and insurance at the time of onboarding, Maritime Pro Connect does not guarantee the quality, timeliness, safety, pricing, or outcome of any work performed by contractors referred through our service. All contracts, agreements, and disputes regarding the work itself are between the homeowner and the contractor directly. You are strongly encouraged to:</p>
+<ul><li>Obtain written quotes and contracts before authorizing any work</li><li>Verify contractor licenses independently through provincial licensing bodies</li><li>Confirm insurance coverage is current before work begins</li><li>Never pay the full amount upfront before work is completed</li></ul>
+<h3>6. Contractor Responsibilities</h3>
+<p>Contractors who sign up to receive leads through Maritime Pro Connect agree to: maintain valid licensing and liability insurance; respond to homeowner leads in a timely and professional manner; comply with all applicable provincial regulations and building codes; and comply with Canada's Anti-Spam Legislation (CASL) when contacting homeowners.</p>
+<h3>7. Prohibited Use</h3>
+<p>You agree not to use this Site to: submit false or misleading lead requests; attempt to reverse-engineer, scrape, or copy any part of the Site; interfere with the operation of the Site or its infrastructure; impersonate another person or entity; or use the Site for any unlawful purpose.</p>
+<h3>8. Intellectual Property</h3>
+<p>All content on this website, including but not limited to text, design, graphics, code, logos, and layout, is the intellectual property of Maritime Pro Connect and is protected by applicable Canadian copyright and intellectual property laws. You may not reproduce, distribute, or create derivative works from any content on this Site without express written permission from Maritime Pro Connect.</p>
+<h3>9. Limitation of Liability</h3>
+<p>To the fullest extent permitted by law, Maritime Pro Connect shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from: your use of or inability to use the Site; any contractor work or failure to perform; any inaccuracies in contractor information; or any third-party actions. Our total liability to you, if any, shall not exceed the value of fees you have paid to us, which for homeowners is zero.</p>
+<h3>10. Disclaimer of Warranties</h3>
+<p>The Site and its services are provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+<h3>11. Governing Law and Jurisdiction</h3>
+<p>These Terms are governed by and construed in accordance with the laws of the Province of New Brunswick and the federal laws of Canada applicable therein. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of New Brunswick, Canada.</p>
+<h3>12. Changes to Terms</h3>
+<p>Maritime Pro Connect reserves the right to modify these Terms at any time. Changes will be effective upon posting to the Site with an updated effective date. Your continued use of the Site after any changes constitutes your acceptance of the new Terms.</p>
+<h3>13. Contact</h3>
+<p>Questions about these Terms of Use should be directed to:<br><strong>Email:</strong> hello@maritimeproconnect.ca<br><strong>Address:</strong> Maritime Pro Connect, Moncton, New Brunswick, Canada</p>
+</div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     CASL COMPLIANCE
+═══════════════════════════════════════ -->
+<div class="page" id="page-casl">
+<div class="page-hero"><div class="section-eyebrow">Legal</div><h1>CASL <em>Compliance</em></h1><div class="gold-bar"></div><p>How Maritime Pro Connect complies with Canada's Anti-Spam Legislation. Effective May 1, 2026.</p></div>
+<div class="page-body">
+<div class="legal-body">
+<p>Canada's Anti-Spam Legislation (CASL), which came into force on July 1, 2014, regulates the sending of commercial electronic messages (CEMs) to Canadian electronic addresses. Maritime Pro Connect is committed to full compliance with CASL in all of our communications.</p>
+<h3>1. What is CASL?</h3>
+<p>CASL prohibits the sending of commercial electronic messages — including emails, texts, and messages sent to social media accounts — to Canadian recipients without their express or implied consent. It also establishes requirements for identification and unsubscribe mechanisms in all commercial messages.</p>
+<h3>2. How We Obtain Consent</h3>
+<p>Maritime Pro Connect only sends commercial electronic messages to individuals who have provided consent in one of the following ways:</p>
+<ul>
+<li><strong>Express consent:</strong> By submitting a form on our website, checking a consent box, or explicitly agreeing to receive communications from us.</li>
+<li><strong>Implied consent:</strong> Where a homeowner or contractor has an existing business relationship with Maritime Pro Connect (for example, an active lead request or contractor subscription) within the preceding two years.</li>
+</ul>
+<p>We do not send unsolicited bulk emails or purchase email lists.</p>
+<h3>3. Identification in All Messages</h3>
+<p>Every commercial electronic message sent by Maritime Pro Connect clearly identifies:</p>
+<ul><li>Maritime Pro Connect as the sender</li><li>Our mailing address: Maritime Pro Connect, Moncton, New Brunswick, Canada</li><li>Our contact email: hello@maritimeproconnect.ca</li></ul>
+<h3>4. Unsubscribe Mechanism</h3>
+<p>Every commercial email we send includes a clear, functional, and easy-to-use unsubscribe link or mechanism. We honour all unsubscribe requests within 10 business days as required by CASL. Once you unsubscribe, we will not send you further commercial messages unless you provide fresh express consent.</p>
+<h3>5. Contractor Obligations</h3>
+<p>All contractors who join the Maritime Pro Connect network are required, as a condition of participation, to comply with CASL when contacting homeowners whose information we share with them. Contractors agree to:</p>
+<ul><li>Only contact homeowners who have submitted a request and thereby provided implied consent to be contacted by relevant contractors</li><li>Identify themselves clearly in all communications</li><li>Honour any unsubscribe or "do not contact" requests from homeowners immediately</li><li>Not use homeowner contact information for any purpose other than responding to the specific lead request</li></ul>
+<h3>6. Record Keeping</h3>
+<p>Maritime Pro Connect maintains records of consent obtained from both homeowners and contractors in compliance with CASL's record-keeping requirements. These records are retained for a minimum of three years.</p>
+<h3>7. Complaints and Contact</h3>
+<p>If you believe you have received a communication from Maritime Pro Connect that violates CASL, or if you wish to withdraw your consent, please contact us immediately:</p>
+<p><strong>Email:</strong> hello@maritimeproconnect.ca<br><strong>Address:</strong> Maritime Pro Connect, Moncton, New Brunswick, Canada</p>
+<p>You also have the right to file a complaint with the Canadian Radio-television and Telecommunications Commission (CRTC) at <strong>crtc.gc.ca</strong> or the Competition Bureau at <strong>competitionbureau.gc.ca</strong>.</p>
+</div>
+</div>
+</div>
+
+
+
+<!-- ═══════════════════════════════════════
+     BLOG POST 1 — ROOFING MONCTON
+═══════════════════════════════════════ -->
+<div class="page" id="page-blog-roofing">
+<div class="page-hero" style="padding-bottom:48px;">
+  <div style="margin-bottom:12px;"><span style="color:var(--gold);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Roofing · Moncton</span> <span style="color:rgba(232,237,242,0.4);font-size:12px;margin-left:12px;">May 2026 · 5 min read</span></div>
+  <h1 style="font-size:clamp(28px,4vw,52px);">5 Best Roofing Contractors<br><em>in Moncton, NB (2026)</em></h1>
+  <div class="gold-bar"></div>
+  <p>How to find a licensed, insured roofer in Moncton — and what to look for before you sign anything.</p>
+</div>
+<div class="page-body" style="max-width:780px;">
+  <p style="font-size:17px;line-height:1.9;color:var(--slate);margin-bottom:28px;font-weight:300;">Finding a good roofer in Moncton is harder than it should be. A quick Google search turns up dozens of names, but most homeowners have no idea who's actually licensed, who carries liability insurance, and who's going to show up when they say they will. This guide walks you through exactly what to look for — and how to get competing quotes without the runaround.</p>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">What Makes a Good Roofer in Moncton?</h3>
+  <p style="font-size:15px;line-height:1.85;color:var(--slate);margin-bottom:16px;font-weight:300;">New Brunswick doesn't have a single unified roofing contractor license — but legitimate roofers will carry <strong>WorkSafeNB coverage</strong> and <strong>liability insurance of at least $2 million</strong>. Always ask for both before they set foot on your roof. Any professional will provide this without hesitation. If they can't, move on.</p>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">The 5 Things to Check Before Hiring</h3>
+  <div class="card" style="margin-bottom:14px;"><h3>1. Proof of Liability Insurance</h3><p>Ask them to email you a current certificate of insurance naming you as additionally insured for the duration of the job. This protects you if a worker is injured on your property or if they cause damage.</p></div>
+  <div class="card" style="margin-bottom:14px;"><h3>2. WorkSafeNB Clearance Letter</h3><p>Ask for a current clearance letter from WorkSafeNB. This confirms they are registered and in good standing. Takes 2 minutes for them to pull — if they refuse, they likely aren't registered.</p></div>
+  <div class="card" style="margin-bottom:14px;"><h3>3. Written Quote with Materials Specified</h3><p>A written quote should specify the shingle brand and grade (e.g. IKO Cambridge, GAF Timberline), the number of layers being removed, whether ice and water shield is included on the eaves, and the warranty terms.</p></div>
+  <div class="card" style="margin-bottom:14px;"><h3>4. Local References</h3><p>Ask for 2–3 recent jobs in Greater Moncton you can call. A contractor who just finished a roof in Riverview last month is a much safer bet than someone driving in from out of town.</p></div>
+  <div class="card" style="margin-bottom:28px;"><h3>5. Payment Terms — Never 100% Upfront</h3><p>A reasonable payment structure is 10–20% deposit, 40% at material delivery, and the remainder on completion. Any contractor demanding full payment upfront before work starts is a red flag.</p></div>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">What Does a Roof Replacement Cost in Moncton?</h3>
+  <table><tr><th>Home Size</th><th>Asphalt Shingles</th><th>Metal Roofing</th></tr>
+  <tr><td>1,200 sq ft</td><td>$5,000 – $8,500</td><td>$9,000 – $14,000</td></tr>
+  <tr><td>1,500 sq ft</td><td>$6,500 – $11,000</td><td>$11,000 – $18,000</td></tr>
+  <tr><td>2,000 sq ft</td><td>$8,500 – $14,500</td><td>$15,000 – $24,000</td></tr></table>
+  <p style="font-size:13px;color:var(--slate);margin-top:8px;font-style:italic;">Prices are estimates for 2026 in the Greater Moncton area. Steep pitches, multiple valleys, and removal of existing layers add cost.</p>
+  <div style="margin-top:40px;background:var(--navy);padding:36px;border-left:4px solid var(--gold);">
+    <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:#fff;margin-bottom:10px;">Get 3 Free Roofing Quotes in Moncton</h3>
+    <p style="color:rgba(232,237,242,0.65);font-size:15px;margin-bottom:20px;font-weight:300;">We connect you with up to 3 vetted local roofers. Free, no obligation, and they come to you.</p>
+    <button class="btn-gold" onclick="goTo('roofing')">Get My Free Quotes →</button>
+  </div>
+  <div style="margin-top:32px;"><button onclick="goTo('blog')" style="background:transparent;border:1.5px solid var(--ocean);color:var(--ocean);padding:10px 22px;font-size:14px;font-weight:600;cursor:pointer;">← Back to Blog</button></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BLOG POST 2 — HEAT PUMP REBATES
+═══════════════════════════════════════ -->
+<div class="page" id="page-blog-heatpump">
+<div class="page-hero" style="padding-bottom:48px;">
+  <div style="margin-bottom:12px;"><span style="color:var(--gold);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">HVAC · New Brunswick</span> <span style="color:rgba(232,237,242,0.4);font-size:12px;margin-left:12px;">April 2026 · 6 min read</span></div>
+  <h1 style="font-size:clamp(28px,4vw,52px);">NB Heat Pump Rebates 2026 —<br><em>What You Actually Get</em></h1>
+  <div class="gold-bar"></div>
+  <p>NB Power offers up to $2,000 back on qualifying heat pump installs. Here's exactly how to claim it.</p>
+</div>
+<div class="page-body" style="max-width:780px;">
+  <p style="font-size:17px;line-height:1.9;color:var(--slate);margin-bottom:28px;font-weight:300;">Heat pumps are the single best home upgrade you can make in Atlantic Canada right now — and both New Brunswick and Nova Scotia are paying you to do it. Here's the current state of the rebate programs and exactly how to claim your money.</p>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">NB Power Home Energy Efficiency Program</h3>
+  <p style="font-size:15px;line-height:1.85;color:var(--slate);margin-bottom:16px;font-weight:300;">NB Power customers can receive rebates for qualifying heat pump installations. As of 2026, the rebate amounts are:</p>
+  <table><tr><th>System Type</th><th>Rebate Amount</th><th>Requirements</th></tr>
+  <tr><td>Mini-split (single zone)</td><td>Up to $500</td><td>Must be ENERGY STAR certified</td></tr>
+  <tr><td>Mini-split (multi-zone)</td><td>Up to $1,000</td><td>Must be installed by certified contractor</td></tr>
+  <tr><td>Ducted cold-climate system</td><td>Up to $2,000</td><td>Whole-home replacement system</td></tr></table>
+  <p style="font-size:13px;color:var(--slate);margin-top:8px;margin-bottom:28px;font-style:italic;">Verify current amounts at nbpower.com as rebate levels are updated periodically.</p>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">Efficiency Nova Scotia Rebates</h3>
+  <p style="font-size:15px;line-height:1.85;color:var(--slate);margin-bottom:16px;font-weight:300;">Nova Scotia homeowners can access rebates through Efficiency Nova Scotia, with amounts up to $3,000 for qualifying cold-climate heat pump installations. The program also offers low-interest financing for eligible households.</p>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">Federal Greener Homes Grant</h3>
+  <p style="font-size:15px;line-height:1.85;color:var(--slate);margin-bottom:28px;font-weight:300;">The Canada Greener Homes Grant program has evolved in 2025–2026. Check <strong>canada.ca/greener-homes</strong> for the most current federal rebate available alongside provincial programs — stacking both federal and provincial rebates is allowed and can significantly reduce your cost.</p>
+  <div class="card blue"><h3>💡 Pro Tip: Use a Certified Installer</h3><p>All rebate programs require installation by a certified HVAC contractor registered with the rebate program. When you get quotes through Maritime Pro Connect, ask each contractor specifically if they are registered with NB Power's or Efficiency NS's rebate program. A good contractor will handle the rebate paperwork for you as part of the installation.</p></div>
+  <div style="margin-top:40px;background:var(--navy);padding:36px;border-left:4px solid var(--gold);">
+    <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:#fff;margin-bottom:10px;">Get Free Heat Pump Quotes in Moncton or Halifax</h3>
+    <p style="color:rgba(232,237,242,0.65);font-size:15px;margin-bottom:20px;font-weight:300;">Our HVAC contractors know the rebate programs inside and out. Get your free quotes today.</p>
+    <button class="btn-gold" onclick="goTo('hvac')">Get My Free HVAC Quotes →</button>
+  </div>
+  <div style="margin-top:32px;"><button onclick="goTo('blog')" style="background:transparent;border:1.5px solid var(--ocean);color:var(--ocean);padding:10px 22px;font-size:14px;font-weight:600;cursor:pointer;">← Back to Blog</button></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BLOG POST 3 — GETTING QUOTES
+═══════════════════════════════════════ -->
+<div class="page" id="page-blog-quotes">
+<div class="page-hero" style="padding-bottom:48px;">
+  <div style="margin-bottom:12px;"><span style="color:var(--gold);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Tips · All Trades</span> <span style="color:rgba(232,237,242,0.4);font-size:12px;margin-left:12px;">March 2026 · 4 min read</span></div>
+  <h1 style="font-size:clamp(28px,4vw,52px);">How to Get Contractor Quotes<br><em>Without the Runaround</em></h1>
+  <div class="gold-bar"></div>
+  <p>Why contractors ghost homeowners, how to avoid it, and why getting 3 quotes always saves money.</p>
+</div>
+<div class="page-body" style="max-width:780px;">
+  <p style="font-size:17px;line-height:1.9;color:var(--slate);margin-bottom:28px;font-weight:300;">Every homeowner in Moncton has a story about a contractor who said they'd call back and never did. It's frustrating — but understanding why it happens makes it easy to avoid. Here's the full picture on getting quotes that actually result in someone showing up.</p>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">Why Contractors Don't Call Back</h3>
+  <p style="font-size:15px;line-height:1.85;color:var(--slate);margin-bottom:16px;font-weight:300;">Good contractors in Moncton and Halifax are genuinely busy — especially from May through October. When they receive a vague inquiry like "hey what would it cost to redo my kitchen?" they often don't prioritize it because they have no idea if you're serious. The solution is simple: be specific and signal that you're ready to move.</p>
+  <div class="card" style="margin-bottom:14px;"><h3>✅ What to Include in Your Quote Request</h3><p>Your approximate timeline ("looking to start in the next 4–6 weeks"), the scope of work as specifically as possible, the address or at least the neighbourhood, and whether you've already decided on materials or need guidance. The more specific you are, the faster contractors respond.</p></div>
+  <div class="card" style="margin-bottom:28px;"><h3>📞 Call vs. Text vs. Email</h3><p>In Atlantic Canada's trades market, a phone call or text gets a response far faster than an email. Most busy contractors check their email infrequently. If you submitted a form online, follow up with a direct text or call 24 hours later if you haven't heard back.</p></div>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">Why 3 Quotes Always Saves You Money</h3>
+  <p style="font-size:15px;line-height:1.85;color:var(--slate);margin-bottom:16px;font-weight:300;">The spread between the lowest and highest quote for the same job is typically 20–40% in Maritime Canada. For a $15,000 roofing job that's a $3,000–$6,000 difference for identical work. Getting only one quote is the single most expensive mistake homeowners make.</p>
+  <p style="font-size:15px;line-height:1.85;color:var(--slate);margin-bottom:16px;font-weight:300;">The middle quote is usually the right one. The lowest is sometimes a red flag (cut corners, unlicensed), and the highest is sometimes padded. Three quotes gives you a solid picture of fair market value for your specific job.</p>
+  <div style="margin-top:40px;background:var(--navy);padding:36px;border-left:4px solid var(--gold);">
+    <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:#fff;margin-bottom:10px;">Get 3 Quotes From Vetted Local Contractors</h3>
+    <p style="color:rgba(232,237,242,0.65);font-size:15px;margin-bottom:20px;font-weight:300;">We do the legwork — you get 3 qualified contractors calling you. Free, no obligation.</p>
+    <button class="btn-gold" onclick="goTo('home');setTimeout(()=>scrollTo('get-quote'),100)">Get My Free Quotes →</button>
+  </div>
+  <div style="margin-top:32px;"><button onclick="goTo('blog')" style="background:transparent;border:1.5px solid var(--ocean);color:var(--ocean);padding:10px 22px;font-size:14px;font-weight:600;cursor:pointer;">← Back to Blog</button></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BLOG POST 4 — PLUMBERS HALIFAX
+═══════════════════════════════════════ -->
+<div class="page" id="page-blog-plumbers">
+<div class="page-hero" style="padding-bottom:48px;">
+  <div style="margin-bottom:12px;"><span style="color:var(--gold);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Plumbing · Halifax</span> <span style="color:rgba(232,237,242,0.4);font-size:12px;margin-left:12px;">March 2026 · 5 min read</span></div>
+  <h1 style="font-size:clamp(28px,4vw,52px);">Top Plumbers in Halifax, NS —<br><em>Licensed &amp; Reviewed</em></h1>
+  <div class="gold-bar"></div>
+  <p>What a licensed plumber in Nova Scotia must carry, and how to verify credentials before they start work.</p>
+</div>
+<div class="page-body" style="max-width:780px;">
+  <p style="font-size:17px;line-height:1.9;color:var(--slate);margin-bottom:28px;font-weight:300;">Plumbing is one of the most regulated trades in Nova Scotia — and for good reason. Bad plumbing work can cause water damage, sewage backups, or even health hazards. Before you hire anyone to touch your pipes in Halifax or Dartmouth, here's what you need to know.</p>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">Nova Scotia Plumbing Licensing</h3>
+  <p style="font-size:15px;line-height:1.85;color:var(--slate);margin-bottom:16px;font-weight:300;">In Nova Scotia, anyone performing plumbing work must hold a valid journeyperson or master plumber certificate issued by the Nova Scotia Apprenticeship Agency. You can verify a plumber's license by contacting the agency directly or asking the contractor for their certificate number.</p>
+  <div class="card" style="margin-bottom:14px;"><h3>📋 What to Ask Every Plumber Before Booking</h3><p>Ask for their NS plumber certificate number, proof of liability insurance (minimum $1 million), and confirmation that any required permits will be pulled for the job. In Halifax, most plumbing work beyond simple fixture replacements requires a permit from Halifax Regional Municipality.</p></div>
+  <div class="card" style="margin-bottom:28px;"><h3>🚨 Red Flags to Watch For</h3><p>Unwillingness to pull permits, demanding full cash payment upfront, no written quote, no proof of insurance, or pressure to start immediately without any paperwork. Any of these should send you to the next plumber on your list.</p></div>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">Typical Plumbing Costs in Halifax (2026)</h3>
+  <table><tr><th>Job</th><th>Typical Cost (CAD)</th></tr>
+  <tr><td>Toilet replacement</td><td>$200 – $450 labour</td></tr>
+  <tr><td>Leaky faucet repair</td><td>$100 – $250</td></tr>
+  <tr><td>Water heater replacement (tank)</td><td>$900 – $1,800</td></tr>
+  <tr><td>Main drain cleaning</td><td>$250 – $500</td></tr>
+  <tr><td>Full bathroom rough-in (new)</td><td>$3,000 – $6,000</td></tr></table>
+  <div style="margin-top:40px;background:var(--navy);padding:36px;border-left:4px solid var(--gold);">
+    <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:#fff;margin-bottom:10px;">Get Free Plumbing Quotes in Halifax</h3>
+    <p style="color:rgba(232,237,242,0.65);font-size:15px;margin-bottom:20px;font-weight:300;">Up to 3 licensed Halifax plumbers will contact you. Free, no obligation.</p>
+    <button class="btn-gold" onclick="goTo('plumbing')">Get My Free Plumbing Quotes →</button>
+  </div>
+  <div style="margin-top:32px;"><button onclick="goTo('blog')" style="background:transparent;border:1.5px solid var(--ocean);color:var(--ocean);padding:10px 22px;font-size:14px;font-weight:600;cursor:pointer;">← Back to Blog</button></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BLOG POST 5 — EV CHARGER HALIFAX
+═══════════════════════════════════════ -->
+<div class="page" id="page-blog-ev">
+<div class="page-hero" style="padding-bottom:48px;">
+  <div style="margin-bottom:12px;"><span style="color:var(--gold);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Electrical · Halifax</span> <span style="color:rgba(232,237,242,0.4);font-size:12px;margin-left:12px;">February 2026 · 5 min read</span></div>
+  <h1 style="font-size:clamp(28px,4vw,52px);">EV Charger Installation in Halifax —<br><em>Cost &amp; What to Expect</em></h1>
+  <div class="gold-bar"></div>
+  <p>Everything you need to know about installing a Level 2 home EV charger in Nova Scotia — including permits and rebates.</p>
+</div>
+<div class="page-body" style="max-width:780px;">
+  <p style="font-size:17px;line-height:1.9;color:var(--slate);margin-bottom:28px;font-weight:300;">EV ownership is growing fast in Atlantic Canada, and a home Level 2 charger is one of the best investments you can make alongside buying the car. Here's the full picture on getting one installed in Halifax or Dartmouth.</p>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">Level 1 vs Level 2 — What's the Difference?</h3>
+  <div class="grid-2" style="margin-bottom:24px;">
+    <div class="card"><h3>Level 1 (Standard Outlet)</h3><p>Plugs into a regular 120V outlet. Charges at 5–8 km of range per hour. Fine for plug-in hybrids — too slow for most EVs. No installation required but takes 40+ hours for a full charge.</p></div>
+    <div class="card blue"><h3>Level 2 (240V — Recommended)</h3><p>Requires a dedicated 240V circuit, like your dryer. Charges at 30–50 km of range per hour. Fully charges most EVs overnight. This is what most EV owners install at home.</p></div>
+  </div>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">What Does Installation Cost in Halifax?</h3>
+  <table><tr><th>Scenario</th><th>Typical Cost (CAD)</th></tr>
+  <tr><td>Panel has capacity, garage nearby</td><td>$700 – $1,100</td></tr>
+  <tr><td>Panel has capacity, longer run needed</td><td>$1,100 – $1,800</td></tr>
+  <tr><td>Panel upgrade required (100A to 200A)</td><td>$2,500 – $4,500 total</td></tr></table>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">Permits — Don't Skip This</h3>
+  <p style="font-size:15px;line-height:1.85;color:var(--slate);margin-bottom:16px;font-weight:300;">In Nova Scotia, any 240V circuit installation requires an electrical permit and inspection by Nova Scotia Safety. Your electrician should pull this permit as part of the job. If they don't mention permits, ask. An unpermitted installation can affect your home insurance and create problems when selling your home.</p>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">Federal iMHZEV Rebate</h3>
+  <p style="font-size:15px;line-height:1.85;color:var(--slate);margin-bottom:28px;font-weight:300;">The federal government's iMHZEV program has offered rebates for home EV charger installation for eligible Canadians. Check <strong>tc.canada.ca</strong> for current rebate availability, as programs are updated regularly.</p>
+  <div style="margin-top:40px;background:var(--navy);padding:36px;border-left:4px solid var(--gold);">
+    <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:#fff;margin-bottom:10px;">Get Free EV Charger Install Quotes in Halifax</h3>
+    <p style="color:rgba(232,237,242,0.65);font-size:15px;margin-bottom:20px;font-weight:300;">Licensed electricians in Halifax and Dartmouth will contact you with quotes. Free, no obligation.</p>
+    <button class="btn-gold" onclick="goTo('electrical')">Get My Free Electrical Quotes →</button>
+  </div>
+  <div style="margin-top:32px;"><button onclick="goTo('blog')" style="background:transparent;border:1.5px solid var(--ocean);color:var(--ocean);padding:10px 22px;font-size:14px;font-weight:600;cursor:pointer;">← Back to Blog</button></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BLOG POST 6 — BATHROOM RENO MONCTON
+═══════════════════════════════════════ -->
+<div class="page" id="page-blog-bathroom">
+<div class="page-hero" style="padding-bottom:48px;">
+  <div style="margin-bottom:12px;"><span style="color:var(--gold);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Renovations · Cost Guide</span> <span style="color:rgba(232,237,242,0.4);font-size:12px;margin-left:12px;">January 2026 · 6 min read</span></div>
+  <h1 style="font-size:clamp(28px,4vw,52px);">Bathroom Renovation in Moncton —<br><em>Average Costs 2026</em></h1>
+  <div class="gold-bar"></div>
+  <p>What a mid-range bathroom reno actually costs in Moncton today, broken down by trade and material.</p>
+</div>
+<div class="page-body" style="max-width:780px;">
+  <p style="font-size:17px;line-height:1.9;color:var(--slate);margin-bottom:28px;font-weight:300;">Bathroom renovations are consistently one of the best-return home improvements you can make in Moncton — and one of the most commonly misbudgeted. Here's an honest breakdown of what things actually cost in 2026, so you can plan properly and avoid surprises mid-project.</p>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">What's Included in a Full Bathroom Renovation?</h3>
+  <p style="font-size:15px;line-height:1.85;color:var(--slate);margin-bottom:16px;font-weight:300;">A full renovation typically covers: demo of existing finishes, waterproofing, tile work (floor and walls), new vanity and fixtures, toilet, lighting, exhaust fan, paint, and any plumbing or electrical updates required. Here's how those costs typically break down:</p>
+  <table><tr><th>Component</th><th>Budget Range</th><th>Mid-Range</th><th>High-End</th></tr>
+  <tr><td>Tile (supply + install)</td><td>$1,500</td><td>$3,500</td><td>$7,000+</td></tr>
+  <tr><td>Vanity + fixtures</td><td>$800</td><td>$2,000</td><td>$5,000+</td></tr>
+  <tr><td>Plumbing (labour)</td><td>$800</td><td>$1,500</td><td>$3,000</td></tr>
+  <tr><td>Electrical (labour)</td><td>$400</td><td>$800</td><td>$1,800</td></tr>
+  <tr><td>Shower / tub</td><td>$600</td><td>$2,500</td><td>$8,000+</td></tr>
+  <tr><td>Demo + drywall</td><td>$500</td><td>$1,200</td><td>$2,500</td></tr>
+  <tr><td>General contractor fee</td><td>$1,500</td><td>$3,000</td><td>$6,000+</td></tr>
+  <tr><td style="font-weight:700;">Total Estimate</td><td style="font-weight:700;">$6,100</td><td style="font-weight:700;">$14,500</td><td style="font-weight:700;">$33,000+</td></tr></table>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:32px 0 12px;">The Biggest Cost Surprises</h3>
+  <div class="card" style="margin-bottom:14px;"><h3>🚿 Shower vs. Tub Swap</h3><p>Replacing a tub with a walk-in shower is very popular but adds significant cost — you'll need new waterproofing, tile work, and often a drain relocation. Budget an extra $2,000–$5,000 for this swap compared to a tub-to-tub replacement.</p></div>
+  <div class="card" style="margin-bottom:28px;"><h3>🔧 Hidden Water Damage</h3><p>In older Moncton homes (pre-1990), it's common to open a bathroom wall and find damaged subfloor or mould from years of slow leaks. Budget a 10–15% contingency — it's not always there, but when it is, you'll be glad you planned for it.</p></div>
+  <div style="margin-top:40px;background:var(--navy);padding:36px;border-left:4px solid var(--gold);">
+    <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:#fff;margin-bottom:10px;">Get Free Bathroom Renovation Quotes in Moncton</h3>
+    <p style="color:rgba(232,237,242,0.65);font-size:15px;margin-bottom:20px;font-weight:300;">Compare up to 3 quotes from vetted local renovation contractors. Free, no obligation.</p>
+    <button class="btn-gold" onclick="goTo('renovations')">Get My Free Renovation Quotes →</button>
+  </div>
+  <div style="margin-top:32px;"><button onclick="goTo('blog')" style="background:transparent;border:1.5px solid var(--ocean);color:var(--ocean);padding:10px 22px;font-size:14px;font-weight:600;cursor:pointer;">← Back to Blog</button></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     FOOTER — on every page
+═══════════════════════════════════════ -->
+<footer id="mainFooter">
+  <div class="footer-brand">
+    <span class="footer-logo" onclick="goTo('home')">Maritime <span>Pro</span> Connect</span>
+    <p>Connecting Moncton &amp; Halifax homeowners with trusted local contractors. Free, fast, and built for Maritime Canada.</p>
+  </div>
+  <div>
+    <h5>Services</h5>
+    <ul>
+      <li><a onclick="goTo('roofing')">Roofing</a></li>
+      <li><a onclick="goTo('plumbing')">Plumbing</a></li>
+      <li><a onclick="goTo('electrical')">Electrical</a></li>
+      <li><a onclick="goTo('hvac')">HVAC</a></li>
+      <li><a onclick="goTo('renovations')">Renovations</a></li>
+    </ul>
+  </div>
+  <div>
+    <h5>Company</h5>
+    <ul>
+      <li><a onclick="goTo('about')">About Us</a></li>
+      <li><a onclick="window.location.href='contractors.html'">For Contractors</a></li>
+      <li><a onclick="goTo('blog')">Blog</a></li>
+      <li><a onclick="goTo('contact')">Contact</a></li>
+    </ul>
+  </div>
+  <div>
+    <h5>Legal</h5>
+    <ul>
+      <li><a onclick="goTo('privacy')">Privacy Policy</a></li>
+      <li><a onclick="goTo('terms')">Terms of Use</a></li>
+      <li><a onclick="goTo('casl')">CASL Compliance</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Maritime Pro Connect. All rights reserved. Serving Moncton, NB &amp; Halifax, NS.</p>
+    <p>Built for Maritime homeowners. &nbsp;·&nbsp; <span class="footer-contractor-link" onclick="window.location.href='contractors.html'">Are you a contractor? →</span></p>
+  </div>
+</footer>
+
+<script>
+// ── PAGE SWITCHER ──
+function goTo(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  var target = document.getElementById('page-' + name);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Move footer outside all pages so it always shows
+    document.body.appendChild(document.getElementById('mainFooter'));
+  }
+}
+
+// ── ANCHOR SCROLL ──
+function scrollTo(id) {
+  var el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+// ── HAMBURGER MENU ──
+function toggleMenu() {
+  var nav = document.getElementById('navLinks');
+  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  nav.style.flexDirection = 'column';
+  nav.style.position = 'absolute';
+  nav.style.top = '58px';
+  nav.style.left = '0';
+  nav.style.right = '0';
+  nav.style.background = 'rgba(26,42,58,0.98)';
+  nav.style.padding = '16px 24px';
+  nav.style.gap = '16px';
+  nav.style.zIndex = '199';
+}
+
+// ── NAV SHADOW ──
+window.addEventListener('scroll', function() {
+  document.getElementById('mainNav').style.boxShadow =
+    window.scrollY > 10 ? '0 2px 24px rgba(0,0,0,0.25)' : 'none';
+});
+
+// ── HANDLE ?page= LINKS FROM CONTRACTORS PAGE ──
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var pg = params.get('page');
+  if (pg) { goTo(pg); }
+})();
+
+// ── MAIN LEAD FORM ──
+// ── FORMSPREE AJAX — Homeowner leads endpoint: maqvddag ──
+var FORMSPREE_ID = 'maqvddag';
+
+function sendLead(data, formEl, successEl) {
+  var btn = formEl.querySelector('button[type=button],button.submit-btn,.submit-btn');
+  if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+  fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+    method: 'POST',
+    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(r){
+    if (r.ok || r.errors === undefined) {
+      formEl.style.display = 'none';
+      successEl.style.display = 'block';
+    } else {
+      alert('Something went wrong. Please try again or call us directly.');
+      if (btn) { btn.disabled = false; btn.textContent = btn.getAttribute('data-orig') || 'Send'; }
+    }
+  })
+  .catch(function(){
+    // Still show success — don't punish user for network blip
+    formEl.style.display = 'none';
+    successEl.style.display = 'block';
+  });
+}
+
+function submitLead() {
+  var n = document.getElementById('fname').value.trim();
+  var p = document.getElementById('fphone').value.trim();
+  var c = document.getElementById('fcity').value;
+  var e = document.getElementById('femail').value.trim();
+  var s = document.getElementById('fservice').value;
+  var d = document.getElementById('fdesc').value.trim();
+  if (!n || !p || !c || !e || !s) { alert('Please fill in all required fields.'); return; }
+  sendLead({
+    name: n, phone: p, city: c, email: e, service: s, description: d,
+    _subject: '🔔 New Lead: ' + s + ' in ' + c,
+    _replyto: e
+  }, document.getElementById('homeFormContent'), document.getElementById('homeSuccess'));
+}
+
+// ── SERVICE PAGE FORMS ──
+function submitSvc(prefix, service) {
+  var n = document.getElementById(prefix+'Name').value.trim();
+  var p = document.getElementById(prefix+'Phone').value.trim();
+  var e = document.getElementById(prefix+'Email') ? document.getElementById(prefix+'Email').value.trim() : '';
+  var city = document.getElementById(prefix+'City') ? document.getElementById(prefix+'City').value : '';
+  if (!n || !p) { alert('Please fill in your name and phone number.'); return; }
+  sendLead({
+    name: n, phone: p, email: e, city: city, service: service,
+    _subject: '🔔 New Lead: ' + service + ' in ' + (city || 'Atlantic Canada'),
+    _replyto: e
+  }, document.getElementById(prefix+'Form'), document.getElementById(prefix+'Success'));
+}
+
+// ── CONTACT FORM ──
+function submitContact() {
+  var n = document.getElementById('ctName').value.trim();
+  var p = document.getElementById('ctPhone').value.trim();
+  var e = document.getElementById('ctEmail').value.trim();
+  var t = document.getElementById('ctType').value;
+  var m = document.getElementById('ctMsg').value.trim();
+  if (!n || !p) { alert('Please fill in your name and phone.'); return; }
+  sendLead({
+    name: n, phone: p, email: e, type: t, message: m,
+    _subject: '📬 Contact Form: ' + (t || 'General Inquiry'),
+    _replyto: e
+  }, document.getElementById('ctForm'), document.getElementById('ctSuccess'));
+}
+
+// ── BLOG SUBSCRIBE ──
+function blogSub() {
+  var e = document.getElementById('blogEmail').value.trim();
+  if (!e || !e.includes('@')) { alert('Please enter a valid email address.'); return; }
+  fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+    method: 'POST',
+    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: e, _subject: '\uD83D\uDCEC Newsletter Subscribe', source: 'Blog Newsletter' })
+  }).then(function() {
+    document.getElementById('blogSubMsg').style.display = 'block';
+  }).catch(function() {
+    document.getElementById('blogSubMsg').style.display = 'block';
+  });
+}
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</body>
+</html>
