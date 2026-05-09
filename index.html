@@ -571,9 +571,9 @@ footer ul a:hover{color:var(--gold);}
       </div>
       <div class="calc-result" id="calcResult" style="display:none;">
         <div>
-          <div class="calc-result-label">Estimated cost in Moncton / Halifax (2026)</div>
+          <div class="calc-result-label" id="calcLabel">Estimated cost in Moncton / Halifax (2026)</div>
           <div class="calc-result-range" id="calcRange">$0 - $0</div>
-          <div class="calc-result-note">Rough estimate only. Get real quotes to confirm.</div>
+          <div class="calc-result-note">Rough estimate only — get real quotes to confirm your actual price.</div>
         </div>
         <button class="calc-cta-btn" onclick="goHome('get-quote')">Get Free Quotes &rarr;</button>
       </div>
@@ -2167,20 +2167,28 @@ var calcData = {
 };
 var finishMult = {budget:0.75,mid:1.0,high:1.5};
 function calcEstimate() {
-  var t = document.getElementById('calcTrade').value;
-  var s = document.getElementById('calcSize').value;
-  var f = document.getElementById('calcFinish').value;
-  var res = document.getElementById('calcResult');
-  var rng = document.getElementById('calcRange');
+  var tradeEl  = document.getElementById('calcTrade');
+  var sizeEl   = document.getElementById('calcSize');
+  var finishEl = document.getElementById('calcFinish');
+  var res      = document.getElementById('calcResult');
+  var rng      = document.getElementById('calcRange');
+  var lbl      = document.getElementById('calcLabel');
+  var t = tradeEl  ? tradeEl.value  : '';
+  var s = sizeEl   ? sizeEl.value   : '';
+  var f = finishEl ? finishEl.value : '';
   if (!t || !s || !f) { if(res) res.style.display='none'; return; }
   var base = calcData[t] && calcData[t][s];
   if (!base) { if(res) res.style.display='none'; return; }
-  var m = finishMult[f] || 1;
-  var lo = Math.round(base[0]*m/100)*100;
-  var hi = Math.round(base[1]*m/100)*100;
-  var fmt = function(n){ return '$'+n.toLocaleString('en-CA'); };
-  if (rng) rng.textContent = fmt(lo) + ' - ' + fmt(hi);
-  if (res) res.style.display = 'flex';
+  var m  = finishMult[f] || 1;
+  var lo = Math.round(base[0] * m / 100) * 100;
+  var hi = Math.round(base[1] * m / 100) * 100;
+  var fmt = function(n){ return '$' + n.toLocaleString('en-CA'); };
+  var tradeLabel  = tradeEl.options[tradeEl.selectedIndex].text;
+  var sizeLabel   = sizeEl.options[sizeEl.selectedIndex].text;
+  var finishLabel = finishEl.options[finishEl.selectedIndex].text;
+  if (lbl) lbl.textContent = tradeLabel + ' — ' + sizeLabel + ' — ' + finishLabel + ' (Moncton / Halifax 2026)';
+  if (rng) rng.textContent = fmt(lo) + ' – ' + fmt(hi);
+  if (res) { res.style.display = 'flex'; res.style.opacity='0'; setTimeout(function(){ res.style.transition='opacity 0.3s'; res.style.opacity='1'; },10); }
 }
 
 // ── FAQ TOGGLE ──
