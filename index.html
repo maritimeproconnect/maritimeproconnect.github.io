@@ -4,19 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maritime Pro Connect – Trusted Contractors in Moncton & Halifax</title>
-<meta name="description" content="Maritime Pro Connect connects Moncton and Halifax homeowners with vetted, licensed local contractors. Free quotes for roofing, plumbing, electrical, HVAC, and renovations. No obligation.">
-<meta name="keywords" content="contractor moncton, contractor halifax, roofing moncton, plumber halifax, electrician moncton, hvac moncton, renovation contractor moncton, maritime pro connect">
+<meta name="description" content="Maritime Pro Connect connects Moncton and Halifax homeowners with vetted, licensed local contractors. Free quotes for roofing, plumbing, electrical, HVAC, and renovations.">
+<meta name="keywords" content="contractor moncton, contractor halifax, roofing moncton, plumber halifax, electrician moncton, hvac moncton, renovation contractor moncton">
 <meta name="author" content="Maritime Pro Connect">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Maritime Pro Connect – Free Contractor Quotes in Moncton & Halifax">
-<meta property="og:description" content="Get up to 3 free quotes from vetted local contractors in Moncton and Halifax. Roofing, plumbing, electrical, HVAC, renovations and more. 100% free for homeowners.">
+<meta property="og:description" content="Get up to 3 free quotes from vetted local contractors in Moncton and Halifax. 100% free for homeowners.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://maritimeproconnect.ca">
-<meta property="og:image" content="https://maritimeproconnect.ca/og-image.jpg">
-<meta property="og:locale" content="en_CA">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Maritime Pro Connect – Free Contractor Quotes">
-<meta name="twitter:description" content="Vetted local contractors in Moncton & Halifax. Free quotes, no obligation. maritimeproconnect.ca">
 <link rel="canonical" href="https://maritimeproconnect.ca">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -334,28 +330,14 @@ footer ul a:hover{color:var(--gold);}
   .con-stats{gap:28px;}
 }
 
-/* ── SEASONAL BANNER ── */
-.seasonal-banner{background:var(--gold);color:var(--navy);padding:10px 48px;display:flex;justify-content:space-between;align-items:center;position:fixed;top:0;left:0;right:0;z-index:300;font-size:14px;font-weight:600;}
-.seasonal-banner a{color:var(--navy);text-decoration:underline;cursor:pointer;font-weight:700;}
-.seasonal-banner-close{background:none;border:none;cursor:pointer;font-size:18px;color:var(--navy);line-height:1;padding:0 4px;font-weight:700;}
-.banner-active nav#mainNav{top:40px;}
-.banner-active .page{padding-top:40px;}
-
-/* ── STICKY MOBILE CTA ── */
-.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--gold);color:var(--navy);padding:14px 24px;font-size:16px;font-weight:700;text-align:center;cursor:pointer;border:none;width:100%;transition:background 0.2s;box-shadow:0 -4px 20px rgba(0,0,0,0.2);}
-.sticky-cta:hover{background:#dbb96a;}
+/* STICKY MOBILE CTA */
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--gold);color:var(--navy);padding:14px 24px;font-size:16px;font-weight:700;text-align:center;cursor:pointer;border:none;width:100%;box-shadow:0 -4px 20px rgba(0,0,0,0.2);}
 @media(max-width:768px){.sticky-cta{display:block;}}
-
-/* ── URGENCY COUNTER ── */
-.urgency-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.25);color:#16a34a;font-size:12px;font-weight:600;padding:5px 12px;margin-bottom:16px;border-radius:2px;}
+/* URGENCY BADGE */
+.urgency-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.25);color:#16a34a;font-size:12px;font-weight:600;padding:5px 12px;margin-bottom:16px;}
 .urgency-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;animation:pulse 1.5s infinite;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.3);}}
-
-/* ── STAT COUNT-UP ANIMATION ── */
-.stat-num{transition:color 0.2s;}
-.stat-num.counting{color:var(--gold2,#e8c96a);}
-
-/* ── FAQ ── */
+/* FAQ */
 .faq-item{border-bottom:1px solid #dce3ea;overflow:hidden;}
 .faq-question{display:flex;justify-content:space-between;align-items:center;padding:18px 0;cursor:pointer;font-size:16px;font-weight:600;color:var(--navy);transition:color 0.2s;}
 .faq-question:hover{color:var(--ocean);}
@@ -364,58 +346,55 @@ footer ul a:hover{color:var(--gold);}
 .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.3s ease;}
 .faq-item.open .faq-answer{max-height:400px;padding-bottom:18px;}
 .faq-answer p{font-size:15px;color:var(--slate);line-height:1.75;font-weight:300;}
-
-/* ── COST CALCULATOR ── */
+/* COST CALCULATOR */
 .calc-wrap{background:var(--fog);padding:40px;margin:24px 0;}
-.calc-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:8px;}
-.calc-sub{font-size:14px;color:var(--slate);margin-bottom:28px;font-weight:300;}
+.calc-title{font-family:"Playfair Display",serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:8px;}
 .calc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:24px;}
 .calc-field label{display:block;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--slate);margin-bottom:6px;}
-.calc-field select{width:100%;padding:11px 13px;border:1.5px solid #d0d8e4;font-family:'Source Sans 3',sans-serif;font-size:14px;color:var(--ink);background:#fff;outline:none;appearance:none;cursor:pointer;}
+.calc-field select{width:100%;padding:11px 13px;border:1.5px solid #d0d8e4;font-family:"Source Sans 3",sans-serif;font-size:14px;color:var(--ink);background:#fff;outline:none;appearance:none;cursor:pointer;}
 .calc-result{background:var(--navy);padding:24px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
 .calc-result-label{color:rgba(232,237,242,0.7);font-size:14px;font-weight:300;}
-.calc-result-range{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:var(--gold);}
+.calc-result-range{font-family:"Playfair Display",serif;font-size:32px;font-weight:900;color:var(--gold);}
 .calc-result-note{font-size:12px;color:rgba(232,237,242,0.45);margin-top:4px;}
 .calc-cta-btn{background:var(--gold);color:var(--navy);border:none;padding:12px 24px;font-weight:700;font-size:14px;cursor:pointer;white-space:nowrap;}
-.calc-cta-btn:hover{background:#dbb96a;}
 @media(max-width:768px){.calc-grid{grid-template-columns:1fr;}.calc-wrap{padding:24px 20px;}}
-
-/* ── FRENCH TOGGLE ── */
-.lang-toggle{display:flex;gap:0;border:1px solid rgba(255,255,255,0.2);overflow:hidden;}
-.lang-btn{background:transparent;border:none;color:rgba(247,249,251,0.55);padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;letter-spacing:1px;transition:all 0.2s;font-family:'Source Sans 3',sans-serif;}
+/* LANG TOGGLE */
+.lang-toggle{display:flex;gap:0;border:1px solid rgba(255,255,255,0.2);overflow:hidden;margin-right:8px;}
+.lang-btn{background:transparent;border:none;color:rgba(247,249,251,0.55);padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;letter-spacing:1px;transition:all 0.2s;font-family:"Source Sans 3",sans-serif;}
 .lang-btn.active{background:var(--gold);color:var(--navy);}
 .lang-btn:hover:not(.active){color:var(--gold);}
-
-/* ── REFERRAL SECTION ── */
-.referral-box{background:linear-gradient(135deg,var(--ocean),var(--navy));padding:40px;border-left:4px solid var(--gold);margin:24px 0;}
-.referral-box h3{font-family:'Playfair Display',serif;font-size:24px;color:#fff;margin-bottom:10px;}
-.referral-box p{color:rgba(232,237,242,0.7);font-size:15px;line-height:1.75;margin-bottom:20px;font-weight:300;}
-.referral-box .ref-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;}
-.ref-step{text-align:center;padding:20px 16px;background:rgba(255,255,255,0.05);}
-.ref-step .ref-num{font-family:'Playfair Display',serif;font-size:36px;color:var(--gold);font-weight:900;line-height:1;}
-.ref-step p{font-size:13px;color:rgba(232,237,242,0.6);margin-top:8px;font-weight:300;}
-@media(max-width:768px){.referral-box .ref-steps{grid-template-columns:1fr;}}
-
-/* ── BACK TO TOP ── */
-.back-to-top{position:fixed;bottom:80px;right:20px;width:44px;height:44px;background:var(--navy);border:2px solid var(--gold);color:var(--gold);font-size:18px;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:140;transition:all 0.2s;border-radius:2px;}
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:80px;right:20px;width:44px;height:44px;background:var(--navy);border:2px solid var(--gold);color:var(--gold);font-size:18px;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:140;border-radius:2px;}
 .back-to-top:hover{background:var(--gold);color:var(--navy);}
 .back-to-top.visible{display:flex;}
 @media(max-width:768px){.back-to-top{bottom:70px;}}
+/* SEASONAL BANNER */
+.seasonal-banner{background:var(--gold);color:var(--navy);padding:10px 48px;display:none;justify-content:space-between;align-items:center;position:fixed;top:0;left:0;right:0;z-index:300;font-size:14px;font-weight:600;}
+.banner-close{background:none;border:none;cursor:pointer;font-size:18px;color:var(--navy);font-weight:700;padding:0 4px;}
+/* REFERRAL */
+.referral-box{background:linear-gradient(135deg,var(--ocean),var(--navy));padding:40px;border-left:4px solid var(--gold);margin:24px 0;}
+.referral-box h3{font-family:"Playfair Display",serif;font-size:24px;color:#fff;margin-bottom:10px;}
+.referral-box p{color:rgba(232,237,242,0.7);font-size:15px;line-height:1.75;margin-bottom:20px;font-weight:300;}
+.ref-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;}
+.ref-step{text-align:center;padding:20px 16px;background:rgba(255,255,255,0.05);}
+.ref-num{font-family:"Playfair Display",serif;font-size:36px;color:var(--gold);font-weight:900;line-height:1;}
+.ref-step p{font-size:13px;color:rgba(232,237,242,0.6);margin-top:8px;font-weight:300;}
+@media(max-width:768px){.ref-steps{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
 
-<!-- ── SEASONAL BANNER — update text and show/hide in JS below ── -->
-<div class="seasonal-banner" id="seasonalBanner" style="display:none;">
-  <span id="bannerText">❄️ Winter is coming to Moncton &amp; Halifax — book your furnace check and roof inspection now before contractors fill up. <a onclick="goHome('get-quote')">Get free quotes →</a></span>
-  <button class="seasonal-banner-close" onclick="closeBanner()" title="Close">✕</button>
+<!-- SEASONAL BANNER -->
+<div class="seasonal-banner" id="seasonalBanner">
+  <span id="bannerText"></span>
+  <button class="banner-close" onclick="closeBanner()">&#x2715;</button>
 </div>
 
-<!-- ── STICKY MOBILE CTA ── -->
-<button class="sticky-cta" onclick="goHome('get-quote')" id="stickyCta">🏠 Get Free Contractor Quotes →</button>
+<!-- STICKY MOBILE CTA -->
+<button class="sticky-cta" onclick="goHome('get-quote')">&#127968; Get Free Contractor Quotes &rarr;</button>
 
-<!-- ── BACK TO TOP ── -->
-<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
 
 <!-- ═══════════════════════════════════════
      NAV — shared across all pages
@@ -435,11 +414,13 @@ footer ul a:hover{color:var(--gold);}
     <li><a onclick="goTo('contact')">Contact</a></li>
     <li><a onclick="goTo('contractors')" style="color:rgba(200,164,90,0.6);font-size:13px;">For Contractors</a></li>
   </ul>
-  <div class="lang-toggle">
-    <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
-    <button class="lang-btn" id="langFR" onclick="setLang('fr')">FR</button>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="langFR" onclick="setLang('fr')">FR</button>
+    </div>
+    <button class="nav-cta" onclick="goHome('get-quote')">Get Free Quote</button>
   </div>
-  <button class="nav-cta" onclick="goHome('get-quote')">Get Free Quote</button>
   <div class="hamburger" onclick="toggleMenu()" id="hamburger">
     <span></span><span></span><span></span>
   </div>
@@ -552,60 +533,49 @@ footer ul a:hover{color:var(--gold);}
   </div>
 </section>
 
-<!-- ── COST ESTIMATOR CALCULATOR ── -->
-<section style="background:#fff;padding:80px;" id="estimator">
+<section style="background:#fff;padding:72px 80px;" id="estimator">
   <div style="max-width:760px;margin:0 auto;">
     <div class="section-eyebrow">Free Tool</div>
     <h2 class="section-h2">How Much Will My <em>Project Cost?</em></h2>
-    <p class="section-lead">Get a rough estimate before you request quotes. Moncton and Halifax pricing for 2026.</p>
+    <p class="section-lead">Rough estimates for Moncton and Halifax in 2026. Get real quotes to confirm your actual price.</p>
     <div class="calc-wrap">
       <div class="calc-title">Project Cost Estimator</div>
-      <p class="calc-sub">Select your trade, city, and project size to see a realistic price range.</p>
       <div class="calc-grid">
-        <div class="calc-field">
-          <label>Trade / Service</label>
+        <div class="calc-field"><label>Trade</label>
           <select id="calcTrade" onchange="calcEstimate()">
             <option value="">Select a trade</option>
-            <option value="roofing">Roofing</option>
-            <option value="plumbing">Plumbing</option>
-            <option value="electrical">Electrical</option>
-            <option value="hvac">HVAC / Heat Pump</option>
-            <option value="kitchen">Kitchen Renovation</option>
-            <option value="bathroom">Bathroom Renovation</option>
-            <option value="basement">Basement Finishing</option>
-            <option value="deck">Deck / Fence</option>
-            <option value="flooring">Flooring</option>
-            <option value="masonry">Masonry / Concrete</option>
-            <option value="painting">Painting (Interior)</option>
-            <option value="siding">Siding / Cladding</option>
+            <option value="roofing">Roofing</option><option value="plumbing">Plumbing</option>
+            <option value="electrical">Electrical</option><option value="hvac">HVAC / Heat Pump</option>
+            <option value="kitchen">Kitchen Renovation</option><option value="bathroom">Bathroom Renovation</option>
+            <option value="basement">Basement Finishing</option><option value="deck">Deck / Fence</option>
+            <option value="flooring">Flooring</option><option value="masonry">Masonry / Concrete</option>
+            <option value="painting">Painting</option><option value="siding">Siding / Cladding</option>
           </select>
         </div>
-        <div class="calc-field">
-          <label>Project Size</label>
+        <div class="calc-field"><label>Project Size</label>
           <select id="calcSize" onchange="calcEstimate()">
             <option value="">Select size</option>
-            <option value="small">Small (minor repair / 1 room)</option>
-            <option value="medium">Medium (1–2 rooms / full unit)</option>
+            <option value="small">Small (repair / 1 room)</option>
+            <option value="medium">Medium (1-2 rooms / full unit)</option>
             <option value="large">Large (whole home / major project)</option>
           </select>
         </div>
-        <div class="calc-field">
-          <label>Finish Level</label>
+        <div class="calc-field"><label>Finish Level</label>
           <select id="calcFinish" onchange="calcEstimate()">
             <option value="">Select level</option>
-            <option value="budget">Budget (functional, cost-first)</option>
-            <option value="mid">Mid-Range (quality materials)</option>
-            <option value="high">High-End (premium finishes)</option>
+            <option value="budget">Budget</option>
+            <option value="mid">Mid-Range</option>
+            <option value="high">High-End</option>
           </select>
         </div>
       </div>
       <div class="calc-result" id="calcResult" style="display:none;">
         <div>
-          <div class="calc-result-label">Estimated project cost in Moncton / Halifax (2026)</div>
-          <div class="calc-result-range" id="calcRange">$0 – $0</div>
-          <div class="calc-result-note">Rough estimate only — get real quotes to confirm your actual price.</div>
+          <div class="calc-result-label">Estimated cost in Moncton / Halifax (2026)</div>
+          <div class="calc-result-range" id="calcRange">$0 - $0</div>
+          <div class="calc-result-note">Rough estimate only. Get real quotes to confirm.</div>
         </div>
-        <button class="calc-cta-btn" onclick="goHome('get-quote')">Get Free Quotes →</button>
+        <button class="calc-cta-btn" onclick="goHome('get-quote')">Get Free Quotes &rarr;</button>
       </div>
     </div>
   </div>
@@ -960,65 +930,26 @@ footer ul a:hover{color:var(--gold);}
 
 
 
-<!-- ═══════════════════════════════════════
-     FAQ PAGE
-═══════════════════════════════════════ -->
 <div class="page" id="page-faq">
-<div class="page-hero"><div class="section-eyebrow">Common Questions</div><h1>Frequently Asked <em>Questions</em></h1><div class="gold-bar"></div><p>Everything homeowners and contractors ask us before getting started. Can't find your answer? Email maritimeproconnect@gmail.com.</p></div>
+<div class="page-hero"><div class="section-eyebrow">Common Questions</div><h1>Frequently Asked <em>Questions</em></h1><div class="gold-bar"></div><p>Everything homeowners and contractors ask before getting started. Still have questions? Email maritimeproconnect@gmail.com</p></div>
 <div class="page-body">
   <h2 class="section-h2" style="margin-bottom:32px;">For <em>Homeowners</em></h2>
-  <div class="faq-item" onclick="toggleFaq(this)">
-    <div class="faq-question">Is Maritime Pro Connect really free for homeowners? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><p>Yes — completely free. You will never be charged a fee to submit a project request, receive quotes, or use any feature of our platform. We generate revenue by charging contractors for access to homeowner leads. You pay nothing, ever.</p></div>
-  </div>
-  <div class="faq-item" onclick="toggleFaq(this)">
-    <div class="faq-question">How quickly will contractors contact me? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><p>Most homeowners hear from at least one contractor within a few hours of submitting. Our network is local so contractors are motivated to respond quickly — they know the first one to call usually gets the job. We aim for all leads to be responded to within 24 hours.</p></div>
-  </div>
-  <div class="faq-item" onclick="toggleFaq(this)">
-    <div class="faq-question">How do you verify your contractors? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><p>Every contractor is manually reviewed before being added to Maritime Pro Connect. We check business legitimacy, communication quality, service areas, and overall professionalism. We also ask for proof of licensing and insurance as part of the application process. Contractors with unresolved complaints are removed from the network.</p></div>
-  </div>
-  <div class="faq-item" onclick="toggleFaq(this)">
-    <div class="faq-question">How many contractors will contact me? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><p>Up to 3 pre-screened contractors for your trade and city will reach out with quotes. This gives you enough options to compare prices and approaches without being overwhelmed by calls.</p></div>
-  </div>
-  <div class="faq-item" onclick="toggleFaq(this)">
-    <div class="faq-question">Am I obligated to hire any of the contractors? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><p>Absolutely not. There is zero obligation to hire anyone who contacts you. Getting quotes is completely free and pressure-free — you compare, ask questions, and decide on your own timeline.</p></div>
-  </div>
-  <div class="faq-item" onclick="toggleFaq(this)">
-    <div class="faq-question">Will my information be sold or shared? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><p>Never. Your contact information is shared only with the contractors matched to your specific request in your city. We do not sell data, subscribe you to marketing lists, or share your information with any third party beyond your matched contractors. See our Privacy Policy for full details.</p></div>
-  </div>
-  <div class="faq-item" onclick="toggleFaq(this)">
-    <div class="faq-question">What areas do you serve? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><p>We currently serve Greater Moncton (Moncton, Riverview, Dieppe) and Halifax Regional Municipality (Halifax, Dartmouth, Bedford, Hammonds Plains). We are actively expanding to additional Maritime communities — check back or subscribe to our newsletter for updates.</p></div>
-  </div>
-  <div class="faq-item" onclick="toggleFaq(this)">
-    <div class="faq-question">What if I'm not happy with the quotes I receive? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><p>If you're not satisfied with the contractors or quotes you receive, email us at maritimeproconnect@gmail.com and we'll do our best to find you a better match. Our goal is to make sure every homeowner gets a quality experience.</p></div>
-  </div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">Is Maritime Pro Connect really free for homeowners? <span class="faq-icon">+</span></div><div class="faq-answer"><p>Yes — completely free. You will never be charged a fee to submit a project request, receive quotes, or use any feature of our platform. We generate revenue by charging contractors for leads. You pay nothing, ever.</p></div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">How quickly will contractors contact me? <span class="faq-icon">+</span></div><div class="faq-answer"><p>Most homeowners hear from at least one contractor within a few hours. Our contractors are motivated to respond quickly — first contact usually gets the job. We aim for all leads to be responded to within 24 hours.</p></div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">How do you verify your contractors? <span class="faq-icon">+</span></div><div class="faq-answer"><p>Every contractor is manually reviewed before being added to Maritime Pro Connect. We check business legitimacy, communication quality, service areas, and professionalism. We ask for proof of licensing and insurance as part of the application. Contractors with unresolved complaints are removed.</p></div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">How many contractors will contact me? <span class="faq-icon">+</span></div><div class="faq-answer"><p>Up to 3 pre-screened contractors for your trade and city will reach out. This gives you enough options to compare without being overwhelmed.</p></div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">Am I obligated to hire anyone? <span class="faq-icon">+</span></div><div class="faq-answer"><p>Absolutely not. There is zero obligation. Getting quotes is completely free and pressure-free — you compare and decide on your own timeline.</p></div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">Will my information be sold or shared? <span class="faq-icon">+</span></div><div class="faq-answer"><p>Never. Your contact information is shared only with contractors matched to your specific request in your city. We do not sell data or share your information with any third party beyond your matched contractors.</p></div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">What areas do you serve? <span class="faq-icon">+</span></div><div class="faq-answer"><p>We currently serve Greater Moncton (Moncton, Riverview, Dieppe) and Halifax Regional Municipality (Halifax, Dartmouth, Bedford). We are actively expanding to more Maritime communities.</p></div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">What if I am not happy with the quotes I receive? <span class="faq-icon">+</span></div><div class="faq-answer"><p>Email us at maritimeproconnect@gmail.com and we will do our best to find you a better match. Our goal is to make sure every homeowner gets a quality experience.</p></div></div>
   <div class="divider"></div>
   <h2 class="section-h2" style="margin-bottom:32px;">For <em>Contractors</em></h2>
-  <div class="faq-item" onclick="toggleFaq(this)">
-    <div class="faq-question">How much do leads cost? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><p>Leads are $40 each on the Pay As You Go plan. Our Monthly Plan ($199/month) gets you up to 8 leads per month, and our Power Plan ($349/month) gets you up to 16 leads per month — both at a significantly lower per-lead cost. Visit our contractor page for full pricing details.</p></div>
-  </div>
-  <div class="faq-item" onclick="toggleFaq(this)">
-    <div class="faq-question">How quickly do I receive leads after signing up? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><p>Once your application is approved (usually within 24 hours), leads are delivered to your email within minutes of a homeowner submitting a request in your trade and city. You'll receive the homeowner's name, phone number, email, city, and a full project description.</p></div>
-  </div>
-  <div class="faq-item" onclick="toggleFaq(this)">
-    <div class="faq-question">What if a lead has incorrect contact information? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><p>We replace any lead with an invalid phone number or email — no questions asked. Just email us at maritimeproconnect@gmail.com with the lead details and we'll send a replacement.</p></div>
-  </div>
-  <div class="faq-item" onclick="toggleFaq(this)">
-    <div class="faq-question">Can I cancel my monthly plan? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><p>Yes — you can pause or cancel your monthly plan at any time with no penalty. Simply email us before your next billing date and we'll take care of it.</p></div>
-  </div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">How much do leads cost? <span class="faq-icon">+</span></div><div class="faq-answer"><p>Leads are $40 each on Pay As You Go. Our Monthly Plan ($199/month) gets you up to 8 leads, and our Power Plan ($349/month) gets you up to 16 leads per month. Visit our contractor page for full details.</p></div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">How quickly do I receive leads after signing up? <span class="faq-icon">+</span></div><div class="faq-answer"><p>Once your application is approved (usually within 24 hours), leads are delivered to your email within minutes of a homeowner submitting a request for your trade and city.</p></div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">What if a lead has incorrect contact information? <span class="faq-icon">+</span></div><div class="faq-answer"><p>We replace any lead with an invalid phone number or email — no questions asked. Just email us at maritimeproconnect@gmail.com with the lead details.</p></div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">Can I cancel my monthly plan? <span class="faq-icon">+</span></div><div class="faq-answer"><p>Yes — pause or cancel anytime with no penalty. Email us before your next billing date and we will take care of it.</p></div></div>
 </div>
-<div class="cta-band"><div><h2>Still Have <em>Questions?</em></h2><p>Email us at maritimeproconnect@gmail.com — we respond the same day.</p></div><button class="btn-gold" onclick="goTo('contact')">Contact Us →</button></div>
+<div class="cta-band"><div><h2>Still Have <em>Questions?</em></h2><p>Email us at maritimeproconnect@gmail.com</p></div><button class="btn-gold" onclick="goTo('contact')">Contact Us &rarr;</button></div>
 </div>
 
 <!-- ═══════════════════════════════════════
@@ -1064,6 +995,45 @@ footer ul a:hover{color:var(--gold);}
 </div>
 <div class="cta-band"><div><h2>Need a Different <em>Trade?</em></h2><p>We cover roofing, plumbing, electrical, HVAC, renovations and more.</p></div><button class="btn-gold" onclick="goHome('services')">See All Services →</button></div>
 </div>
+<div class="page" id="page-masonry">
+<div class="page-hero"><div class="section-eyebrow">Masonry &amp; Stonework</div><h1>Masonry &amp; <em>Stonework</em><br>Contractors</h1><div class="gold-bar"></div><p>Connect with vetted masonry contractors in Moncton and Halifax. Free quotes for brickwork, stone, concrete, and chimney repair.</p></div>
+<div class="page-body">
+  <h2 class="section-h2">Masonry Services We <em>Connect You With</em></h2>
+  <p class="section-lead">From chimney repairs to full stone retaining walls — our masonry contractors handle all brick, block, stone, and concrete work in Maritime Canada.</p>
+  <div class="svc-detail-grid">
+    <div class="svc-box"><h3>&#129521; Brick &amp; Block Work</h3><p>New brick construction, repointing, tuck-pointing, and brick repair for homes and buildings.</p></div>
+    <div class="svc-box"><h3>&#129704; Stone Work</h3><p>Natural and manufactured stone installation — feature walls, walkways, steps, and water features.</p></div>
+    <div class="svc-box"><h3>&#128293; Chimney Repair</h3><p>Chimney repointing, crown repair, flashing replacement, and full chimney rebuilds.</p></div>
+    <div class="svc-box"><h3>&#127959; Retaining Walls</h3><p>Concrete block, natural stone, and interlocking retaining wall construction and repair.</p></div>
+    <div class="svc-box"><h3>&#128663; Concrete Work</h3><p>Driveways, patios, walkways, steps, and foundation repairs — poured and stamped concrete.</p></div>
+    <div class="svc-box"><h3>&#127968; Foundation Repair</h3><p>Parging, waterproofing, crack repair, and structural masonry work on home foundations.</p></div>
+  </div>
+  <div class="divider"></div>
+  <h2 class="section-h2">Typical Costs in <em>Moncton &amp; Halifax</em></h2>
+  <table><tr><th>Service</th><th>Typical Range (CAD)</th><th>Notes</th></tr>
+  <tr><td>Chimney repointing</td><td>$800 - $2,500</td><td>Depends on height and scope</td></tr>
+  <tr><td>Concrete driveway (new)</td><td>$5,000 - $14,000</td><td>Per 500 sq ft, 4" thick</td></tr>
+  <tr><td>Retaining wall (block)</td><td>$80 - $150/linear ft</td><td>Installed, 3-4 ft high</td></tr>
+  <tr><td>Stone walkway</td><td>$3,000 - $8,000</td><td>Natural stone, 50-100 sq ft</td></tr>
+  <tr><td>Foundation parging</td><td>$1,500 - $4,500</td><td>Full perimeter, average home</td></tr></table>
+  <div class="divider"></div>
+  <h2 class="section-h2">Get Your Free <em>Masonry Quote</em></h2>
+  <div class="card" style="max-width:560px;border-left-color:var(--ocean);">
+    <div id="maForm">
+      <div class="form-group"><label>Your Name</label><input type="text" id="maName" placeholder="Jane Doe"></div>
+      <div class="form-row"><div class="form-group"><label>Phone</label><input type="tel" id="maPhone" placeholder="(506) 000-0000"></div><div class="form-group"><label>City</label><select id="maCity"><option value="">Select</option><option>Moncton, NB</option><option>Riverview, NB</option><option>Dieppe, NB</option><option>Halifax, NS</option><option>Dartmouth, NS</option><option>Bedford, NS</option></select></div></div>
+      <div class="form-group"><label>Email</label><input type="email" id="maEmail" placeholder="you@email.com"></div>
+      <div class="form-group"><label>Project Type</label><select id="maService"><option value="">Select</option><option>Chimney Repair / Repointing</option><option>Concrete Driveway / Patio</option><option>Retaining Wall</option><option>Stone Walkway / Steps</option><option>Foundation Parging / Repair</option><option>Brick / Block Work</option><option>Other Masonry</option></select></div>
+      <div class="form-group"><label>Project Description</label><textarea id="maDesc" placeholder="e.g. chimney needs repointing, crumbling mortar joints..."></textarea></div>
+      <button class="submit-btn" onclick="submitSvc('ma','Masonry and Stonework')">Get My Free Masonry Quotes &rarr;</button>
+      <p class="form-note">&#128274; Free for homeowners. Your info is never sold.</p>
+    </div>
+    <div class="success-msg" id="maSuccess"><h3>&#10003; Request Received!</h3><p>Up to 3 local masonry contractors will contact you within 24 hours.</p></div>
+  </div>
+</div>
+<div class="cta-band"><div><h2>Need a Different <em>Trade?</em></h2><p>We cover roofing, plumbing, electrical, HVAC, renovations and more.</p></div><button class="btn-gold" onclick="goHome('services')">See All Services &rarr;</button></div>
+</div>
+
 <!-- ═══════════════════════════════════════
      ABOUT PAGE
 ═══════════════════════════════════════ -->
@@ -1728,17 +1698,16 @@ footer ul a:hover{color:var(--gold);}
 <!-- Referral Program -->
 <section style="background:var(--navy);padding:64px 80px;">
   <div class="referral-box">
-    <h3>🤝 Know a Good Contractor? Send Them Our Way.</h3>
-    <p>If you know a licensed contractor in Moncton or Halifax who could benefit from steady local leads, refer them to Maritime Pro Connect. When they sign up and complete their first paid month, you get <strong style="color:var(--gold);">one free lead credit</strong> on your account — no strings attached.</p>
+    <h3>&#129309; Know a Good Contractor? Send Them Our Way.</h3>
+    <p>If you know a licensed contractor in Moncton or Halifax who could benefit from steady local leads, refer them to Maritime Pro Connect. When they sign up and complete their first paid month, you get <strong style="color:var(--gold);">one free lead credit</strong> — no strings attached.</p>
     <div class="ref-steps">
       <div class="ref-step"><div class="ref-num">01</div><p>Share our contractor page with a colleague: maritimeproconnect.ca</p></div>
       <div class="ref-step"><div class="ref-num">02</div><p>They apply and mention your business name in their application</p></div>
-      <div class="ref-step"><div class="ref-num">03</div><p>Once they complete their first paid month, we add one free lead to your account</p></div>
+      <div class="ref-step"><div class="ref-num">03</div><p>Once they complete their first paid month, we add a free lead to your account</p></div>
     </div>
-    <button class="btn-gold" onclick="document.getElementById('con-signup').scrollIntoView({behavior:'smooth'})">Apply Now &amp; Start Referring →</button>
+    <button class="btn-gold" onclick="document.getElementById('con-signup').scrollIntoView({behavior:'smooth'})">Apply Now &amp; Start Referring &rarr;</button>
   </div>
 </section>
-
 <!-- Contractor Testimonials -->
 <section class="contractor-reviews">
   <div class="section-eyebrow">Contractor Feedback</div>
@@ -1770,106 +1739,85 @@ footer ul a:hover{color:var(--gold);}
      SHARED FOOTER — shows on all homeowner pages
      ✏️ KEYNOTE: Update copyright year, cities, and email as needed
 ═══════════════════════════════════════ -->
-<!-- ═══════════════════════════════════════
-     PAGE FRANÇAISE — FRENCH PAGE
-═══════════════════════════════════════ -->
 <div class="page" id="page-french">
 <section class="hero">
   <div class="hero-left">
-    <div class="region-pill">Moncton &amp; Halifax — Canada Atlantique</div>
+    <div class="region-pill">Moncton &amp; Halifax &mdash; Canada Atlantique</div>
     <h1 class="hero-h1">Des Entrepreneurs<span class="place">de Confiance, Ici Chez Vous.</span></h1>
     <div class="hero-divider"></div>
-    <p class="hero-sub">Maritime Pro Connect met en relation les propriétaires de Moncton et Halifax avec des entrepreneurs locaux licenciés et vérifiés — toiture, plomberie, électricité, rénovations et plus. Soumissions gratuites. Sans obligation.</p>
+    <p class="hero-sub">Maritime Pro Connect met en relation les propri&eacute;taires de Moncton et Halifax avec des entrepreneurs locaux licenci&eacute;s et v&eacute;rifi&eacute;s. Soumissions gratuites. Sans obligation.</p>
     <div class="hero-btns">
       <button class="btn-gold" onclick="scrollToSection('get-quote-fr')">Obtenir Ma Soumission Gratuite</button>
-      <button class="btn-ghost" onclick="setLang('en')">English →</button>
+      <button class="btn-ghost" onclick="setLang('en')">English &rarr;</button>
     </div>
     <div class="trust-badges">
-      <div class="badge"><div class="badge-dot"></div>Entrepreneurs licenciés et assurés</div>
-      <div class="badge"><div class="badge-dot"></div>100% gratuit pour les propriétaires</div>
+      <div class="badge"><div class="badge-dot"></div>Entrepreneurs licenci&eacute;s et assur&eacute;s</div>
+      <div class="badge"><div class="badge-dot"></div>100% gratuit pour les propri&eacute;taires</div>
       <div class="badge"><div class="badge-dot"></div>Entrepreneurs locaux des Maritimes</div>
     </div>
   </div>
   <div class="hero-right" id="get-quote-fr">
     <div class="lead-form">
-      <div class="form-eyebrow">Gratuit — Sans Obligation</div>
-      <div class="form-title">Obtenez Votre Soumission Gratuite</div>
-      <p class="form-sub">Décrivez votre projet — nous vous mettrons en contact avec des entrepreneurs locaux de confiance à Moncton ou Halifax.</p>
+      <div class="form-eyebrow">Gratuit &mdash; Sans Obligation</div>
+      <div class="form-title">Soumission Gratuite</div>
+      <p class="form-sub">D&eacute;crivez votre projet &mdash; nous vous mettrons en contact avec des entrepreneurs locaux de confiance.</p>
       <div id="frFormContent">
         <div class="form-group"><label>Votre Nom</label><input type="text" id="frName" placeholder="Jane Doe"></div>
         <div class="form-row">
-          <div class="form-group"><label>Téléphone</label><input type="tel" id="frPhone" placeholder="(506) 000-0000"></div>
-          <div class="form-group"><label>Ville</label>
-            <select id="frCity">
-              <option value="">— Sélectionner —</option>
-              <option>Moncton, NB</option><option>Riverview, NB</option><option>Dieppe, NB</option>
-              <option>Halifax, NS</option><option>Dartmouth, NS</option><option>Bedford, NS</option><option>Autre</option>
-            </select>
-          </div>
+          <div class="form-group"><label>T&eacute;l&eacute;phone</label><input type="tel" id="frPhone" placeholder="(506) 000-0000"></div>
+          <div class="form-group"><label>Ville</label><select id="frCity"><option value="">S&eacute;lectionner</option><option>Moncton, NB</option><option>Riverview, NB</option><option>Dieppe, NB</option><option>Halifax, NS</option><option>Dartmouth, NS</option><option>Bedford, NS</option><option>Autre</option></select></div>
         </div>
         <div class="form-group"><label>Courriel</label><input type="email" id="frEmail" placeholder="vous@courriel.com"></div>
         <div class="form-group"><label>Service Requis</label>
           <select id="frService">
-            <option value="">— Sélectionner un métier —</option>
-            <option>Toiture</option><option>Plomberie</option><option>Électricité</option>
-            <option>Chauffage / Thermopompe</option><option>Rénovation de cuisine</option>
-            <option>Rénovation de salle de bain</option><option>Finition de sous-sol</option>
-            <option>Plancher</option><option>Peinture</option><option>Maçonnerie</option>
-            <option>Revêtement extérieur</option><option>Terrasse / Clôture</option>
-            <option>Entrepreneur général</option><option>Autre</option>
+            <option value="">S&eacute;lectionner</option>
+            <option>Toiture</option><option>Plomberie</option><option>Electricit&eacute;</option>
+            <option>Chauffage / Thermopompe</option><option>R&eacute;novation de cuisine</option>
+            <option>R&eacute;novation de salle de bain</option><option>Finition de sous-sol</option>
+            <option>Plancher</option><option>Ma&ccedil;onnerie</option><option>Peinture</option>
+            <option>Entrepreneur g&eacute;n&eacute;ral</option><option>Autre</option>
           </select>
         </div>
-        <div class="form-group"><label>Détails du Projet</label><textarea id="frDesc" placeholder="Brève description de votre projet…"></textarea></div>
-        <button class="submit-btn" onclick="submitFrenchLead()">Envoyer Ma Demande →</button>
-        <p class="form-note">🔒 Vos informations ne sont jamais vendues. Les entrepreneurs vous contactent directement.</p>
+        <div class="form-group"><label>D&eacute;tails du Projet</label><textarea id="frDesc" placeholder="Br&egrave;ve description de votre projet..."></textarea></div>
+        <button class="submit-btn" onclick="submitFrenchLead()">Envoyer Ma Demande &rarr;</button>
+        <p class="form-note">&#128274; Vos informations ne sont jamais vendues.</p>
       </div>
-      <div class="success-msg" id="frSuccess">
-        <div style="font-size:48px;margin-bottom:14px;">✅</div>
-        <h3>Demande Reçue!</h3>
-        <p>Nous associons votre demande avec les meilleurs entrepreneurs locaux.<br>Attendez un appel dans les <strong>24 heures</strong>.</p>
-      </div>
+      <div class="success-msg" id="frSuccess"><div style="font-size:48px;margin-bottom:14px;">&#10003;</div><h3>Demande Re&ccedil;ue!</h3><p>Nous associons votre demande avec les meilleurs entrepreneurs locaux.<br>Attendez un appel dans les <strong>24 heures</strong>.</p></div>
     </div>
   </div>
 </section>
-
 <div class="stats-bar">
-  <div class="stat" onclick="goTo('french')"><div class="stat-num">180+</div><div class="stat-lbl">Entrepreneurs Vérifiés</div></div>
-  <div class="stat" onclick="goTo('french')"><div class="stat-num">850+</div><div class="stat-lbl">Projets Jumelés</div></div>
-  <div class="stat" onclick="goTo('french')"><div class="stat-num">2</div><div class="stat-lbl">Villes Desservies</div></div>
-  <div class="stat" onclick="goTo('french')"><div class="stat-num">24h</div><div class="stat-lbl">Temps de Réponse Moyen</div></div>
+  <div class="stat"><div class="stat-num">180+</div><div class="stat-lbl">Entrepreneurs V&eacute;rifi&eacute;s</div></div>
+  <div class="stat"><div class="stat-num">850+</div><div class="stat-lbl">Projets Jumel&eacute;s</div></div>
+  <div class="stat"><div class="stat-num">2</div><div class="stat-lbl">Villes Desservies</div></div>
+  <div class="stat"><div class="stat-num">24h</div><div class="stat-lbl">Temps de R&eacute;ponse</div></div>
 </div>
-
 <section class="how-section">
-  <div class="section-eyebrow">Comment Ça Marche</div>
+  <div class="section-eyebrow">Comment Ca Marche</div>
   <h2 class="section-h2">Simple comme <em>1, 2, 3</em></h2>
-  <p class="section-lead">De votre premier clic au projet terminé — pas de tracas, juste le bon entrepreneur pour votre travail.</p>
+  <p class="section-lead">De votre premier clic au projet termin&eacute; &mdash; pas de tracas, juste le bon entrepreneur.</p>
   <div class="steps">
-    <div class="step" onclick="scrollToSection('get-quote-fr')"><div class="step-num">01</div><div class="step-icon">📋</div><h3>Soumettez Votre Projet</h3><p>Remplissez le court formulaire en moins de 60 secondes. Indiquez votre métier, votre ville et une brève description de ce dont vous avez besoin.</p></div>
-    <div class="step" onclick="scrollToSection('get-quote-fr')"><div class="step-num">02</div><div class="step-icon">🔍</div><h3>Nous Jumelons et Vérifions</h3><p>Nous associons votre demande aux entrepreneurs locaux licenciés, assurés et évalués à Moncton ou Halifax qui exercent exactement votre métier.</p></div>
-    <div class="step" onclick="scrollToSection('get-quote-fr')"><div class="step-num">03</div><div class="step-icon">📞</div><h3>Les Pros Vous Contactent</h3><p>Jusqu'à 3 entrepreneurs présélectionnés vous contactent avec des soumissions. Vous comparez, posez des questions et choisissez — zéro pression.</p></div>
+    <div class="step" onclick="scrollToSection('get-quote-fr')"><div class="step-num">01</div><div class="step-icon">&#128203;</div><h3>Soumettez Votre Projet</h3><p>Remplissez le court formulaire en moins de 60 secondes. Indiquez votre m&eacute;tier, votre ville et une br&egrave;ve description.</p></div>
+    <div class="step" onclick="scrollToSection('get-quote-fr')"><div class="step-num">02</div><div class="step-icon">&#128269;</div><h3>Nous Jumelons et V&eacute;rifions</h3><p>Nous associons votre demande aux entrepreneurs locaux licenci&eacute;s et assur&eacute;s qui exercent exactement votre m&eacute;tier.</p></div>
+    <div class="step" onclick="scrollToSection('get-quote-fr')"><div class="step-num">03</div><div class="step-icon">&#128222;</div><h3>Les Pros Vous Contactent</h3><p>Jusqu&#39;&agrave; 3 entrepreneurs pr&eacute;s&eacute;lectionn&eacute;s vous contactent avec des soumissions. Z&eacute;ro pression.</p></div>
   </div>
 </section>
-
 <section class="services-section">
   <div class="section-eyebrow">Ce Que Nous Couvrons</div>
-  <h2 class="section-h2">Chaque Métier. <em>Chaque Projet.</em></h2>
-  <p class="section-lead">Des réparations d'urgence aux rénovations complètes — notre réseau local vous couvre.</p>
+  <h2 class="section-h2">Chaque M&eacute;tier. <em>Chaque Projet.</em></h2>
+  <p class="section-lead">Des r&eacute;parations d&#39;urgence aux r&eacute;novations compl&egrave;tes.</p>
   <div class="services-grid">
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">🏠</div><h4>Toiture</h4><p>Réparations, remplacements, gouttières et prévention de la glace.</p></div>
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">🔧</div><h4>Plomberie</h4><p>Réparation de fuites, installation de robinetterie, chauffe-eau.</p></div>
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">⚡</div><h4>Électricité</h4><p>Mise à niveau du panneau, prises, câblage et installation de bornes VE.</p></div>
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">🔥</div><h4>Chauffage / CVC</h4><p>Réparation de fournaise, installation de thermopompe, nettoyage de conduits.</p></div>
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">🍳</div><h4>Rénovation de Cuisine</h4><p>Armoires, comptoirs, rénovations complètes adaptées aux goûts maritimes.</p></div>
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">🛁</div><h4>Rénovation de Salle de Bain</h4><p>Carrelage, vanités, douches à l'italienne et rénovations complètes.</p></div>
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">🪵</div><h4>Plancher</h4><p>Bois franc, PVC, carrelage et moquette — installés correctement.</p></div>
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">🧱</div><h4>Maçonnerie</h4><p>Briques, pierres, béton, murs de soutènement et réparations de cheminée.</p></div>
+    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#127968;</div><h4>Toiture</h4><p>R&eacute;parations, remplacements, gouttieres et pr&eacute;vention de la glace.</p></div>
+    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#128295;</div><h4>Plomberie</h4><p>R&eacute;paration de fuites, installation de robinetterie, chauffe-eau.</p></div>
+    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#9889;</div><h4>Electricit&eacute;</h4><p>Mise &agrave; niveau du panneau, prises, c&acirc;blage et bornes VE.</p></div>
+    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#128293;</div><h4>Chauffage / CVC</h4><p>R&eacute;paration de fournaise, installation de thermopompe.</p></div>
+    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#127859;</div><h4>R&eacute;novation de Cuisine</h4><p>Armoires, comptoirs, r&eacute;novations compl&egrave;tes.</p></div>
+    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#128705;</div><h4>Salle de Bain</h4><p>Carrelage, vanit&eacute;s, douches &agrave; l&#39;italienne.</p></div>
+    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#129521;</div><h4>Ma&ccedil;onnerie</h4><p>Briques, pierres, b&eacute;ton, murs de sout&egrave;nement.</p></div>
+    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#127959;&#65039;</div><h4>R&eacute;novations G&eacute;n&eacute;rales</h4><p>Sous-sol, terrasses, planchers et plus.</p></div>
   </div>
 </section>
-
-<div class="cta-band">
-  <div><h2>Prêt à Démarrer <em>Votre Projet?</em></h2><p>Soumissions gratuites d'entrepreneurs locaux vérifiés à Moncton et Halifax.</p></div>
-  <button class="btn-gold" style="padding:16px 40px;font-size:16px;" onclick="scrollToSection('get-quote-fr')">Obtenir des Soumissions Gratuites →</button>
-</div>
+<div class="cta-band"><div><h2>Pr&ecirc;t &agrave; D&eacute;marrer <em>Votre Projet?</em></h2><p>Soumissions gratuites d&#39;entrepreneurs locaux v&eacute;rifi&eacute;s.</p></div><button class="btn-gold" style="padding:16px 40px;font-size:16px;" onclick="scrollToSection('get-quote-fr')">Obtenir des Soumissions &rarr;</button></div>
 </div>
 
 <footer id="mainFooter">
@@ -1905,7 +1853,7 @@ footer ul a:hover{color:var(--gold);}
       <li><a onclick="goTo('privacy')">Privacy Policy</a></li>
       <li><a onclick="goTo('terms')">Terms of Use</a></li>
       <li><a onclick="goTo('casl')">CASL Compliance</a></li>
-      <li><a onclick="goTo('french')" style="color:rgba(200,164,90,0.6);">Français 🇨🇦</a></li>
+      <li><a onclick="setLang('fr')" style="color:rgba(200,164,90,0.6);">Fran&ccedil;ais &#127464;&#127462;</a></li>
     </ul>
   </div>
   <!-- ✏️ KEYNOTE: Update copyright year as needed -->
@@ -2120,145 +2068,6 @@ function conScrollTo(id) {
 
 // ── CONTRACTOR SIGN-UP FORM ──
 // 📧 Applications go to: maritimeproconnect@gmail.com via Formspree xykoddoy
-// ── SEASONAL BANNER ──
-// ✏️ KEYNOTE: Change banner text in the HTML above (id="bannerText")
-// ✏️ KEYNOTE: Set showBanner=true to enable, false to hide
-(function() {
-  var showBanner = true;
-  var month = new Date().getMonth(); // 0=Jan, 8=Sep, 9=Oct, 10=Nov
-  var bannerText = '';
-  if (month >= 8 && month <= 10) {
-    bannerText = '❄️ Winter is coming to Moncton &amp; Halifax — book your furnace check and roof inspection now before contractors fill up. <a onclick="goHome('get-quote')">Get free quotes →</a>';
-  } else if (month >= 2 && month <= 4) {
-    bannerText = '🌱 Spring reno season is here — book now before contractors' schedules fill up for summer. <a onclick="goHome('get-quote')">Get free quotes →</a>';
-  } else if (month >= 5 && month <= 7) {
-    bannerText = '☀️ Summer is the best time for outdoor projects — decks, driveways, landscaping. <a onclick="goHome('get-quote')">Get free quotes →</a>';
-  }
-  if (showBanner && bannerText && !sessionStorage.getItem('bannerClosed')) {
-    var b = document.getElementById('seasonalBanner');
-    var t = document.getElementById('bannerText');
-    if (b && t) { t.innerHTML = bannerText; b.style.display = 'flex'; document.body.classList.add('banner-active'); }
-  }
-})();
-
-function closeBanner() {
-  document.getElementById('seasonalBanner').style.display = 'none';
-  document.body.classList.remove('banner-active');
-  sessionStorage.setItem('bannerClosed', '1');
-}
-
-// ── BACK TO TOP ──
-window.addEventListener('scroll', function() {
-  var btn = document.getElementById('backToTop');
-  if (btn) btn.classList.toggle('visible', window.scrollY > 400);
-});
-
-// ── URGENCY COUNTER — randomises a realistic number each session ──
-(function() {
-  var cities = ['Moncton','Halifax','Riverview','Dartmouth','Dieppe'];
-  var city = cities[Math.floor(Math.random() * cities.length)];
-  var num = Math.floor(Math.random() * 6) + 2; // 2-7
-  var el = document.getElementById('urgencyText');
-  if (el) el.textContent = num + ' homeowners in ' + city + ' requested quotes today';
-})();
-
-// ── STAT COUNT-UP ANIMATION ──
-function animateStats() {
-  var stats = [
-    {el: document.querySelectorAll('.stat-num')[0], target: 180, suffix: '+'},
-    {el: document.querySelectorAll('.stat-num')[1], target: 850, suffix: '+'},
-    {el: document.querySelectorAll('.stat-num')[2], target: 2, suffix: ''},
-    {el: document.querySelectorAll('.stat-num')[3], target: 24, suffix: 'h'},
-  ];
-  stats.forEach(function(s) {
-    if (!s.el) return;
-    var start = 0;
-    var duration = 1800;
-    var step = (s.target / duration) * 16;
-    s.el.classList.add('counting');
-    var timer = setInterval(function() {
-      start += step;
-      if (start >= s.target) { start = s.target; clearInterval(timer); s.el.classList.remove('counting'); }
-      s.el.textContent = Math.floor(start) + s.suffix;
-    }, 16);
-  });
-}
-// Run count-up when home page is shown
-var _origGoTo = goTo;
-goTo = function(name) {
-  _origGoTo(name);
-  if (name === 'home') setTimeout(animateStats, 200);
-};
-setTimeout(animateStats, 500);
-
-// ── COST CALCULATOR ──
-var calcData = {
-  roofing:   {small:[200,600],medium:[5000,11000],large:[9000,18000]},
-  plumbing:  {small:[100,400],medium:[900,2200],large:[2500,6000]},
-  electrical:{small:[150,500],medium:[700,2500],large:[2500,6000]},
-  hvac:      {small:[300,800],medium:[2500,6000],large:[6000,14000]},
-  kitchen:   {small:[2000,6000],medium:[18000,30000],large:[30000,60000]},
-  bathroom:  {small:[2000,5000],medium:[12000,20000],large:[20000,40000]},
-  basement:  {small:[5000,12000],medium:[25000,40000],large:[40000,65000]},
-  deck:      {small:[2000,5000],medium:[6000,12000],large:[12000,25000]},
-  flooring:  {small:[500,1500],medium:[3000,7000],large:[7000,16000]},
-  masonry:   {small:[500,2000],medium:[3000,8000],large:[8000,20000]},
-  painting:  {small:[300,800],medium:[2000,5000],large:[5000,12000]},
-  siding:    {small:[1000,3000],medium:[6000,14000],large:[14000,30000]},
-};
-var finishMult = {budget:0.75, mid:1.0, high:1.5};
-
-function calcEstimate() {
-  var trade   = document.getElementById('calcTrade').value;
-  var size    = document.getElementById('calcSize').value;
-  var finish  = document.getElementById('calcFinish').value;
-  var result  = document.getElementById('calcResult');
-  var range   = document.getElementById('calcRange');
-  if (!trade || !size || !finish) { if(result) result.style.display='none'; return; }
-  var base = calcData[trade] && calcData[trade][size];
-  if (!base) { if(result) result.style.display='none'; return; }
-  var mult = finishMult[finish] || 1;
-  var low  = Math.round(base[0] * mult / 100) * 100;
-  var high = Math.round(base[1] * mult / 100) * 100;
-  var fmt = function(n){ return '$' + n.toLocaleString('en-CA'); };
-  if (range) range.textContent = fmt(low) + ' – ' + fmt(high);
-  if (result) result.style.display = 'flex';
-}
-
-// ── FAQ TOGGLE ──
-function toggleFaq(item) {
-  var isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
-  if (!isOpen) item.classList.add('open');
-}
-
-// ── LANGUAGE TOGGLE ──
-function setLang(lang) {
-  document.getElementById('langEN').classList.toggle('active', lang === 'en');
-  document.getElementById('langFR').classList.toggle('active', lang === 'fr');
-  if (lang === 'fr') {
-    goTo('french');
-  } else {
-    goTo('home');
-  }
-}
-
-// ── FRENCH LEAD FORM ──
-function submitFrenchLead() {
-  var n = document.getElementById('frName').value.trim();
-  var p = document.getElementById('frPhone').value.trim();
-  var c = document.getElementById('frCity').value;
-  var e = document.getElementById('frEmail').value.trim();
-  var s = document.getElementById('frService').value;
-  var d = document.getElementById('frDesc').value.trim();
-  if (!n || !p || !c || !e || !s) { alert('Veuillez remplir tous les champs obligatoires.'); return; }
-  sendLead({
-    name:n, phone:p, city:c, email:e, service:s, description:d, language:'French',
-    _subject: '🔔 Nouveau Lead (FR): ' + s + ' à ' + c,
-    _replyto: e
-  }, document.getElementById('frFormContent'), document.getElementById('frSuccess'));
-}
-
 function submitContractor() {
   var biz  = document.getElementById('cbiz').value.trim();
   var name = document.getElementById('cname').value.trim();
@@ -2294,6 +2103,118 @@ function submitContractor() {
     document.getElementById('contractorSuccess').style.display = 'block';
   });
 }
+// ── SEASONAL BANNER ──
+(function() {
+  var show = true;
+  if (!show || sessionStorage.getItem('bannerClosed')) return;
+  var m = new Date().getMonth();
+  var msgs = [
+    'Get contractor quotes in Moncton & Halifax — free, no obligation.',
+    'Get contractor quotes in Moncton & Halifax — free, no obligation.',
+    'Spring reno season is here. Book now before contractors fill up.',
+    'Spring reno season is here. Book now before contractors fill up.',
+    'Spring reno season is here. Book now before contractors fill up.',
+    'Summer is perfect for outdoor projects. Get free quotes today.',
+    'Summer is perfect for outdoor projects. Get free quotes today.',
+    'Summer is perfect for outdoor projects. Get free quotes today.',
+    'Winter is coming. Book your furnace check and roof inspection now.',
+    'Winter is coming. Book your furnace check and roof inspection now.',
+    'Winter is coming. Book your furnace check and roof inspection now.',
+    'Get contractor quotes before the holiday rush.'
+  ];
+  var b = document.getElementById('seasonalBanner');
+  var t = document.getElementById('bannerText');
+  if (b && t) {
+    t.textContent = msgs[m];
+    b.style.display = 'flex';
+  }
+})();
+function closeBanner() {
+  var b = document.getElementById('seasonalBanner');
+  if (b) b.style.display = 'none';
+  sessionStorage.setItem('bannerClosed','1');
+}
+
+// ── BACK TO TOP ──
+window.addEventListener('scroll', function() {
+  var btn = document.getElementById('backToTop');
+  if (btn) btn.classList.toggle('visible', window.scrollY > 400);
+});
+
+// ── URGENCY COUNTER ──
+(function() {
+  var cities = ['Moncton','Halifax','Riverview','Dartmouth','Dieppe'];
+  var city = cities[Math.floor(Math.random() * cities.length)];
+  var num = Math.floor(Math.random() * 6) + 2;
+  var el = document.getElementById('urgencyText');
+  if (el) el.textContent = num + ' homeowners in ' + city + ' requested quotes today';
+})();
+
+// ── COST CALCULATOR ──
+var calcData = {
+  roofing:{small:[200,600],medium:[5000,11000],large:[9000,18000]},
+  plumbing:{small:[100,400],medium:[900,2200],large:[2500,6000]},
+  electrical:{small:[150,500],medium:[700,2500],large:[2500,6000]},
+  hvac:{small:[300,800],medium:[2500,6000],large:[6000,14000]},
+  kitchen:{small:[2000,6000],medium:[18000,30000],large:[30000,60000]},
+  bathroom:{small:[2000,5000],medium:[12000,20000],large:[20000,40000]},
+  basement:{small:[5000,12000],medium:[25000,40000],large:[40000,65000]},
+  deck:{small:[2000,5000],medium:[6000,12000],large:[12000,25000]},
+  flooring:{small:[500,1500],medium:[3000,7000],large:[7000,16000]},
+  masonry:{small:[500,2000],medium:[3000,8000],large:[8000,20000]},
+  painting:{small:[300,800],medium:[2000,5000],large:[5000,12000]},
+  siding:{small:[1000,3000],medium:[6000,14000],large:[14000,30000]}
+};
+var finishMult = {budget:0.75,mid:1.0,high:1.5};
+function calcEstimate() {
+  var t = document.getElementById('calcTrade').value;
+  var s = document.getElementById('calcSize').value;
+  var f = document.getElementById('calcFinish').value;
+  var res = document.getElementById('calcResult');
+  var rng = document.getElementById('calcRange');
+  if (!t || !s || !f) { if(res) res.style.display='none'; return; }
+  var base = calcData[t] && calcData[t][s];
+  if (!base) { if(res) res.style.display='none'; return; }
+  var m = finishMult[f] || 1;
+  var lo = Math.round(base[0]*m/100)*100;
+  var hi = Math.round(base[1]*m/100)*100;
+  var fmt = function(n){ return '$'+n.toLocaleString('en-CA'); };
+  if (rng) rng.textContent = fmt(lo) + ' - ' + fmt(hi);
+  if (res) res.style.display = 'flex';
+}
+
+// ── FAQ TOGGLE ──
+function toggleFaq(item) {
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
+}
+
+// ── LANGUAGE TOGGLE ──
+function setLang(lang) {
+  var en = document.getElementById('langEN');
+  var fr = document.getElementById('langFR');
+  if (en) en.classList.toggle('active', lang === 'en');
+  if (fr) fr.classList.toggle('active', lang === 'fr');
+  goTo(lang === 'fr' ? 'french' : 'home');
+}
+
+// ── FRENCH LEAD FORM ──
+function submitFrenchLead() {
+  var n = document.getElementById('frName').value.trim();
+  var p = document.getElementById('frPhone').value.trim();
+  var c = document.getElementById('frCity').value;
+  var e = document.getElementById('frEmail').value.trim();
+  var s = document.getElementById('frService').value;
+  var d = document.getElementById('frDesc').value.trim();
+  if (!n || !p || !c || !e || !s) { alert('Veuillez remplir tous les champs obligatoires.'); return; }
+  sendLead({
+    name:n, phone:p, city:c, email:e, service:s, description:d, language:'French',
+    _subject:'Nouveau Lead (FR): ' + s + ' a ' + c,
+    _replyto:e
+  }, document.getElementById('frFormContent'), document.getElementById('frSuccess'));
+}
+
 </script>
 </body>
 </html>
