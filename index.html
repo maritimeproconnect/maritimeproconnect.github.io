@@ -39,7 +39,7 @@ body{font-family:'Source Sans 3',Georgia,sans-serif;background:var(--white);colo
 .page.active{display:block;}
 
 /* ── NAV ── */
-nav#mainNav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:16px 48px;background:rgba(26,42,58,0.97);backdrop-filter:blur(14px);border-bottom:2px solid var(--gold);}
+nav#mainNav{position:fixed;top:0;left:0;right:0;z-index:200;transition:top 0.2s;display:flex;justify-content:space-between;align-items:center;padding:16px 48px;background:rgba(26,42,58,0.97);backdrop-filter:blur(14px);border-bottom:2px solid var(--gold);}
 .logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#fff;cursor:pointer;user-select:none;}
 .logo span{color:var(--gold);}
 nav ul{list-style:none;display:flex;gap:32px;}
@@ -369,8 +369,9 @@ footer ul a:hover{color:var(--gold);}
 .back-to-top.visible{display:flex;}
 @media(max-width:768px){.back-to-top{bottom:70px;}}
 /* SEASONAL BANNER */
-.seasonal-banner{background:var(--gold);color:var(--navy);padding:10px 48px;display:none;justify-content:space-between;align-items:center;position:fixed;top:0;left:0;right:0;z-index:300;font-size:14px;font-weight:600;}
-.banner-close{background:none;border:none;cursor:pointer;font-size:18px;color:var(--navy);font-weight:700;padding:0 4px;}
+.seasonal-banner{background:var(--gold);color:var(--navy);padding:7px 20px 7px 16px;display:none;justify-content:space-between;align-items:center;position:fixed;top:0;left:0;right:0;z-index:300;font-size:12px;font-weight:600;line-height:1.4;min-height:0;}
+@media(max-width:768px){.seasonal-banner{font-size:11px;padding:6px 12px 6px 12px;}}
+.banner-close{background:none;border:none;cursor:pointer;font-size:16px;color:var(--navy);font-weight:700;padding:0 4px;}
 /* REFERRAL */
 .referral-box{background:linear-gradient(135deg,var(--ocean),var(--navy));padding:40px;border-left:4px solid var(--gold);margin:24px 0;}
 .referral-box h3{font-family:"Playfair Display",serif;font-size:24px;color:#fff;margin-bottom:10px;}
@@ -1740,14 +1741,14 @@ footer ul a:hover{color:var(--gold);}
      ✏️ KEYNOTE: Update copyright year, cities, and email as needed
 ═══════════════════════════════════════ -->
 <div class="page" id="page-french">
-<section class="hero">
+<section class="hero" style="padding-top:58px;">
   <div class="hero-left">
     <div class="region-pill">Moncton &amp; Halifax &mdash; Canada Atlantique</div>
     <h1 class="hero-h1">Des Entrepreneurs<span class="place">de Confiance, Ici Chez Vous.</span></h1>
     <div class="hero-divider"></div>
     <p class="hero-sub">Maritime Pro Connect met en relation les propri&eacute;taires de Moncton et Halifax avec des entrepreneurs locaux licenci&eacute;s et v&eacute;rifi&eacute;s. Soumissions gratuites. Sans obligation.</p>
     <div class="hero-btns">
-      <button class="btn-gold" onclick="scrollToSection('get-quote-fr')">Obtenir Ma Soumission Gratuite</button>
+      <button class="btn-gold" onclick="setTimeout(function(){var el=document.getElementById('get-quote-fr');if(el)el.scrollIntoView({behavior:'smooth'});},100)">Obtenir Ma Soumission Gratuite</button>
       <button class="btn-ghost" onclick="setLang('en')">English &rarr;</button>
     </div>
     <div class="trust-badges">
@@ -1797,9 +1798,9 @@ footer ul a:hover{color:var(--gold);}
   <h2 class="section-h2">Simple comme <em>1, 2, 3</em></h2>
   <p class="section-lead">De votre premier clic au projet termin&eacute; &mdash; pas de tracas, juste le bon entrepreneur.</p>
   <div class="steps">
-    <div class="step" onclick="scrollToSection('get-quote-fr')"><div class="step-num">01</div><div class="step-icon">&#128203;</div><h3>Soumettez Votre Projet</h3><p>Remplissez le court formulaire en moins de 60 secondes. Indiquez votre m&eacute;tier, votre ville et une br&egrave;ve description.</p></div>
-    <div class="step" onclick="scrollToSection('get-quote-fr')"><div class="step-num">02</div><div class="step-icon">&#128269;</div><h3>Nous Jumelons et V&eacute;rifions</h3><p>Nous associons votre demande aux entrepreneurs locaux licenci&eacute;s et assur&eacute;s qui exercent exactement votre m&eacute;tier.</p></div>
-    <div class="step" onclick="scrollToSection('get-quote-fr')"><div class="step-num">03</div><div class="step-icon">&#128222;</div><h3>Les Pros Vous Contactent</h3><p>Jusqu&#39;&agrave; 3 entrepreneurs pr&eacute;s&eacute;lectionn&eacute;s vous contactent avec des soumissions. Z&eacute;ro pression.</p></div>
+    <div class="step" onclick="setTimeout(function(){var el=document.getElementById('get-quote-fr');if(el)el.scrollIntoView({behavior:'smooth'});},100)"><div class="step-num">01</div><div class="step-icon">&#128203;</div><h3>Soumettez Votre Projet</h3><p>Remplissez le court formulaire en moins de 60 secondes. Indiquez votre m&eacute;tier, votre ville et une br&egrave;ve description.</p></div>
+    <div class="step" onclick="setTimeout(function(){var el=document.getElementById('get-quote-fr');if(el)el.scrollIntoView({behavior:'smooth'});},100)"><div class="step-num">02</div><div class="step-icon">&#128269;</div><h3>Nous Jumelons et V&eacute;rifions</h3><p>Nous associons votre demande aux entrepreneurs locaux licenci&eacute;s et assur&eacute;s qui exercent exactement votre m&eacute;tier.</p></div>
+    <div class="step" onclick="setTimeout(function(){var el=document.getElementById('get-quote-fr');if(el)el.scrollIntoView({behavior:'smooth'});},100)"><div class="step-num">03</div><div class="step-icon">&#128222;</div><h3>Les Pros Vous Contactent</h3><p>Jusqu&#39;&agrave; 3 entrepreneurs pr&eacute;s&eacute;lectionn&eacute;s vous contactent avec des soumissions. Z&eacute;ro pression.</p></div>
   </div>
 </section>
 <section class="services-section">
@@ -1807,17 +1808,17 @@ footer ul a:hover{color:var(--gold);}
   <h2 class="section-h2">Chaque M&eacute;tier. <em>Chaque Projet.</em></h2>
   <p class="section-lead">Des r&eacute;parations d&#39;urgence aux r&eacute;novations compl&egrave;tes.</p>
   <div class="services-grid">
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#127968;</div><h4>Toiture</h4><p>R&eacute;parations, remplacements, gouttieres et pr&eacute;vention de la glace.</p></div>
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#128295;</div><h4>Plomberie</h4><p>R&eacute;paration de fuites, installation de robinetterie, chauffe-eau.</p></div>
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#9889;</div><h4>Electricit&eacute;</h4><p>Mise &agrave; niveau du panneau, prises, c&acirc;blage et bornes VE.</p></div>
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#128293;</div><h4>Chauffage / CVC</h4><p>R&eacute;paration de fournaise, installation de thermopompe.</p></div>
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#127859;</div><h4>R&eacute;novation de Cuisine</h4><p>Armoires, comptoirs, r&eacute;novations compl&egrave;tes.</p></div>
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#128705;</div><h4>Salle de Bain</h4><p>Carrelage, vanit&eacute;s, douches &agrave; l&#39;italienne.</p></div>
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#129521;</div><h4>Ma&ccedil;onnerie</h4><p>Briques, pierres, b&eacute;ton, murs de sout&egrave;nement.</p></div>
-    <div class="service-card" onclick="scrollToSection('get-quote-fr')"><div class="service-icon">&#127959;&#65039;</div><h4>R&eacute;novations G&eacute;n&eacute;rales</h4><p>Sous-sol, terrasses, planchers et plus.</p></div>
+    <div class="service-card" onclick="setTimeout(function(){var el=document.getElementById('get-quote-fr');if(el)el.scrollIntoView({behavior:'smooth'});},100)"><div class="service-icon">&#127968;</div><h4>Toiture</h4><p>R&eacute;parations, remplacements, gouttieres et pr&eacute;vention de la glace.</p></div>
+    <div class="service-card" onclick="setTimeout(function(){var el=document.getElementById('get-quote-fr');if(el)el.scrollIntoView({behavior:'smooth'});},100)"><div class="service-icon">&#128295;</div><h4>Plomberie</h4><p>R&eacute;paration de fuites, installation de robinetterie, chauffe-eau.</p></div>
+    <div class="service-card" onclick="setTimeout(function(){var el=document.getElementById('get-quote-fr');if(el)el.scrollIntoView({behavior:'smooth'});},100)"><div class="service-icon">&#9889;</div><h4>Electricit&eacute;</h4><p>Mise &agrave; niveau du panneau, prises, c&acirc;blage et bornes VE.</p></div>
+    <div class="service-card" onclick="setTimeout(function(){var el=document.getElementById('get-quote-fr');if(el)el.scrollIntoView({behavior:'smooth'});},100)"><div class="service-icon">&#128293;</div><h4>Chauffage / CVC</h4><p>R&eacute;paration de fournaise, installation de thermopompe.</p></div>
+    <div class="service-card" onclick="setTimeout(function(){var el=document.getElementById('get-quote-fr');if(el)el.scrollIntoView({behavior:'smooth'});},100)"><div class="service-icon">&#127859;</div><h4>R&eacute;novation de Cuisine</h4><p>Armoires, comptoirs, r&eacute;novations compl&egrave;tes.</p></div>
+    <div class="service-card" onclick="setTimeout(function(){var el=document.getElementById('get-quote-fr');if(el)el.scrollIntoView({behavior:'smooth'});},100)"><div class="service-icon">&#128705;</div><h4>Salle de Bain</h4><p>Carrelage, vanit&eacute;s, douches &agrave; l&#39;italienne.</p></div>
+    <div class="service-card" onclick="setTimeout(function(){var el=document.getElementById('get-quote-fr');if(el)el.scrollIntoView({behavior:'smooth'});},100)"><div class="service-icon">&#129521;</div><h4>Ma&ccedil;onnerie</h4><p>Briques, pierres, b&eacute;ton, murs de sout&egrave;nement.</p></div>
+    <div class="service-card" onclick="setTimeout(function(){var el=document.getElementById('get-quote-fr');if(el)el.scrollIntoView({behavior:'smooth'});},100)"><div class="service-icon">&#127959;&#65039;</div><h4>R&eacute;novations G&eacute;n&eacute;rales</h4><p>Sous-sol, terrasses, planchers et plus.</p></div>
   </div>
 </section>
-<div class="cta-band"><div><h2>Pr&ecirc;t &agrave; D&eacute;marrer <em>Votre Projet?</em></h2><p>Soumissions gratuites d&#39;entrepreneurs locaux v&eacute;rifi&eacute;s.</p></div><button class="btn-gold" style="padding:16px 40px;font-size:16px;" onclick="scrollToSection('get-quote-fr')">Obtenir des Soumissions &rarr;</button></div>
+<div class="cta-band"><div><h2>Pr&ecirc;t &agrave; D&eacute;marrer <em>Votre Projet?</em></h2><p>Soumissions gratuites d&#39;entrepreneurs locaux v&eacute;rifi&eacute;s.</p></div><button class="btn-gold" style="padding:16px 40px;font-size:16px;" onclick="setTimeout(function(){var el=document.getElementById('get-quote-fr');if(el)el.scrollIntoView({behavior:'smooth'});},100)">Obtenir des Soumissions &rarr;</button></div>
 </div>
 
 <footer id="mainFooter">
@@ -2124,14 +2125,22 @@ function submitContractor() {
   ];
   var b = document.getElementById('seasonalBanner');
   var t = document.getElementById('bannerText');
+  var nav = document.getElementById('mainNav');
   if (b && t) {
     t.textContent = msgs[m];
     b.style.display = 'flex';
+    // Push nav down by banner height after render
+    setTimeout(function(){
+      var h = b.offsetHeight;
+      if (nav) nav.style.top = h + 'px';
+    }, 50);
   }
 })();
 function closeBanner() {
   var b = document.getElementById('seasonalBanner');
+  var nav = document.getElementById('mainNav');
   if (b) b.style.display = 'none';
+  if (nav) nav.style.top = '0';
   sessionStorage.setItem('bannerClosed','1');
 }
 
